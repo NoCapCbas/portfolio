@@ -14,3 +14,5 @@ __pycache__/
 # Ignore .next directory (optional)
 **/.next
 
+.DS_Store
+

@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+
+# Ignore node_modules directory
+**/node_modules
+
+# Ignore .next directory (optional)
+**/.next
+

@@ -1,0 +1,7 @@
+# Replace localhost with your application's domain
+
+# Main configuration for HTTPS
+localhost {
+  reverse_proxy /* http://portfolio_app_backend:8000
+
+}

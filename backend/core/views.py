@@ -1,16 +1,18 @@
 from django.shortcuts import render
 from . import forms
 from . import models
-from django.core.paginator import Paginator
+from rest_framework.response import Response
+from rest_framework import status
+from django import http
 
 
 # Create your views here.
-def main(request):
+def projects_deployed_count(request):
     context = {}
 
     number_of_projects_deployed = models.Project.objects.filter(is_live=True).count()
     context['number_of_projects_deployed'] = number_of_projects_deployed
-    return render(request, 'core/main.html', context)
+    return Response(context, status=status.HTTP)
 
 def projects(request):
 
@@ -25,8 +27,7 @@ def projects(request):
     context['page_obj'] = page_obj
     return render(request, 'core/projects.html', context)
 
-def resume(request):
-    from django import http
+def download_resume(request):
     from django.conf import settings
     import os
 

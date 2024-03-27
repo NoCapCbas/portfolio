@@ -53,8 +53,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    # For development
-    # 'whitenoise.runserver_nostatic',    
+    # 3rd Party
+    'djangorestframework',
+
 ]
 
 MIDDLEWARE = [

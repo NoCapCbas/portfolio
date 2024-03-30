@@ -9,4 +9,4 @@ class SkillSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['__all__']
+        fields = '__all__'

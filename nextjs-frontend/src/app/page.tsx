@@ -56,13 +56,13 @@ export default async function ProjectsPage() {
             <CardContent>
               <div className="flex flex-row justify-center align-items h-[50px]">
                 {skills.map((skill, index) => (
-                  <div key={index} className="m-2 max-w-[20px] max-h-[20px] min-w-[20px] min-h-[20px]" title={skill.description}>
+                  <div key={index} className="m-2 max-w-[30px] max-h-[30px] min-w-[30px] min-h-[30px]" title={skill.description}>
                     <div dangerouslySetInnerHTML={{ __html: skill.svg_icon_text }} />
                   </div>
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-between">
+            <CardFooter className="flex justify-center space-x-[50px]">
               <Button variant="default" className="border-white border-[1px]"><Link href="/projects">View Projects</Link></Button>
               <Button variant="default" className="border-white border-[1px]"><Link href="https://www.linkedin.com/in/damondiaz">Contact Me</Link></Button>
             </CardFooter>

@@ -10,20 +10,20 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-interface Recipe {
+interface Project {
   title: string,
   image: string,
   time: number,
   description: string,
-  vegan: boolean,
+  is_live: boolean,
   id: string
 }
 
-async function getRecipes(): Promise<Recipe[]> {
-  // const result = await fetch('htt://localhost:4000/recipes');
+async function getProjects(): Promise<Project[]> {
+  // const result = await fetch('htt://localhost:4000/projects');
   
   // delay response
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const result = [
     {
@@ -31,7 +31,7 @@ async function getRecipes(): Promise<Recipe[]> {
       image: 'test.jpg',
       time: 15,
       description: 'test',
-      vegan: true,
+      is_live: false,
       id: 'test',
     },
     {
@@ -39,7 +39,7 @@ async function getRecipes(): Promise<Recipe[]> {
       image: 'test.jpg',
       time: 5,
       description: 'test',
-      vegan: false,
+      is_live: true,
       id: 'test',    
     },
     {
@@ -47,7 +47,7 @@ async function getRecipes(): Promise<Recipe[]> {
       image: 'test.jpg',
       time: 5,
       description: 'test',
-      vegan: false,
+      is_live: false,
       id: 'test',    
     },
     {
@@ -55,7 +55,7 @@ async function getRecipes(): Promise<Recipe[]> {
       image: 'test.jpg',
       time: 5,
       description: 'test',
-      vegan: false,
+      is_live: true,
       id: 'test',    
     },
     {
@@ -63,7 +63,23 @@ async function getRecipes(): Promise<Recipe[]> {
       image: 'test',
       time: 5,
       description: 'test',
-      vegan: false,
+      is_live: false,
+      id: 'test',    
+    },
+    {
+       title: 'test',
+      image: 'test',
+      time: 5,
+      description: 'test',
+      is_live: false,
+      id: 'test',    
+    },
+    {
+       title: 'test',
+      image: 'test',
+      time: 5,
+      description: 'test',
+      is_live: false,
       id: 'test',    
     },
 
@@ -73,34 +89,34 @@ async function getRecipes(): Promise<Recipe[]> {
 }
 
 export default async function ProjectsPage() {
-  const recipes = await getRecipes();
+  const projects = await getProjects();
 
   return (
-    <main>
-      <nav>
-        <h1 className="text-white px-[20px] xl:px-[0px]">Projects</h1>
-      </nav>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-[25px] xl:py-[5px]" >
-        {recipes.map(recipe => (
-          <Card key={recipe.id} className="flex flex-col justify-between mx-[20px]">
+    <main className="flex flex-col w-full h-full justify-center align-items items-center px-[20px] xs:px-[20px] sm:px-[20px] md:px-[20px] lg:px-[20px] xl:px-[0px]">
+      <div className="flex flex-col justify-start w-full py-[20px]">
+        <h1 className="text-white">Projects</h1>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-[50px] xl:py-[50px] overflow-y-auto w-full" >
+        {projects.map(project => (
+          <Card key={project.id} className="flex flex-col justify-between mx-[20px]">
             <CardHeader className="flex-row gap-4 items-center">
               <Avatar>
-                <AvatarImage src={'/img/${recipe.image}'} alt="recipe img"/>
+                <AvatarImage src={'/img/${project.image}'} alt="project img"/>
                 <AvatarFallback>
-                  {recipe.title.slice(0,2)}
+                  {project.title.slice(0,2)}
                 </AvatarFallback>
               </Avatar>
               <div>
-                <CardTitle>{recipe.title}</CardTitle>
-                <CardDescription>{recipe.time} mins to cook.</CardDescription>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.time} mins to cook.</CardDescription>
               </div>
             </CardHeader>
             <CardContent>
-              <p>{recipe.description}</p>
+              <p>{project.description}</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button>View Recipe</Button>
-              {recipe.vegan && <Badge variant="secondary">Vegan!</Badge>}
+              {project.is_live && <Badge variant="secondary">Live!</Badge>}
             </CardFooter>
           </Card>
         ))}

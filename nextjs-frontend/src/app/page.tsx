@@ -1,3 +1,6 @@
+"use client"
+
+import React, { useState, useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -8,10 +11,38 @@ import {
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import Link from "next/link";
 
 export default async function ProjectsPage() {
+  // State to store the number of apps
+  const [numberOfApps, setNumberOfApps] = useState(0);
+  const [skills, setSkills] = useState([]);
 
+  // Effect hook to fetch the number of apps on component mount
+  useEffect(() => {
+    async function fetchNumberOfApps() {
+      try {
+        const response = await fetch('http://localhost:8000/projects-deployed-count');
+        const data = await response.json();
+        setNumberOfApps(data.number_of_projects_deployed);
+      } catch (error) {
+        console.error("Failed to fetch number of apps", error);
+      }
+    };
 
+    async function fetchSkills() {
+      try {
+        const response = await fetch('http://localhost:8000/skills');
+        const data = await response.json();
+        setSkills(data);
+      } catch (error) {
+        console.error("Failed to fetch skills", error);
+      }
+    }
+
+    fetchNumberOfApps();
+    fetchSkills()
+  }, [])
 
   return (
     <main className="flex w-full h-full justify-center align-items items-center">
@@ -20,16 +51,20 @@ export default async function ProjectsPage() {
             <CardHeader className="flex-col gap-4 items-center text-center">
                 <CardTitle className="text-6xl font-bold">Damon Diaz</CardTitle>
                 <CardDescription className="text-2xl font-bold text-white">{"{Software Engineer}"}</CardDescription>
-                <Badge className="text-black bg-white text-xs" variant="default">Number of apps deployed: 0</Badge>
+                <Badge className="text-black bg-white text-xs" variant="default">Number of apps deployed: {numberOfApps}</Badge>
             </CardHeader>
             <CardContent>
-              <div>
-                icons
+              <div className="flex flex-row justify-center align-items h-[50px]">
+                {skills.map((skill, index) => (
+                  <div key={index} className="m-2 max-w-[20px] max-h-[20px] min-w-[20px] min-h-[20px]" title={skill.description}>
+                    <div dangerouslySetInnerHTML={{ __html: skill.svg_icon_text }} />
+                  </div>
+                ))}
               </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button variant="default" className="border-white border-[1px]">View Projects</Button>
-              <Button variant="default" className="border-white border-[1px]">Contact Me</Button>
+              <Button variant="default" className="border-white border-[1px]"><Link href="/projects">View Projects</Link></Button>
+              <Button variant="default" className="border-white border-[1px]"><Link href="https://www.linkedin.com/in/damondiaz">Contact Me</Link></Button>
             </CardFooter>
           </Card>
       </div>

@@ -5,13 +5,13 @@ export default function Footer() {
     <footer className="fixed bottom-0 w-full py-[5px] flex flex-col items-center justify-center bg-white dark:bg-gray-900">
       <div className="container flex flex-col gap-2 items-center justify-center px-4 text-center md:flex-row md:gap-4 md:px-6 lg:gap-2 lg:grid lg:grid-cols-2 xl:gap-4 xl:grid xl:grid-cols-3">
         <div className="flex items-center gap-2 text-sm sm:justify-center sm:gap-4 md:order-2 lg:order-1 lg:justify-start xl:order-2">
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://www.linkedin.com/in/damondiaz">
             <LinkedinIcon className="h-5 w-5 text-black" />
           </Link>
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
             <GithubIcon className="h-5 w-5 text-black" />
           </Link>
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="http://localhost:8000/download-resume">
             <FileIcon className="h-5 w-5 text-black" />
           </Link>
         </div>

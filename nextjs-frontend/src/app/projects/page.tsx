@@ -8,15 +8,19 @@ import {
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { FaGithub } from "react-icons/fa";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface Project {
-  title: string,
-  image: string,
-  time: number,
-  description: string,
+  id: number,
+  name: string,
+  short_description: string,
+  long_description: string,
+  link: string,
+  repo_link: string,
+  app_video: string,
   is_live: boolean,
-  id: string
+  skills: string[],
 }
 
 async function getProjects(): Promise<Project[]> {
@@ -27,60 +31,81 @@ async function getProjects(): Promise<Project[]> {
 
   const result = [
     {
-      title: 'test',
-      image: 'test.jpg',
-      time: 15,
-      description: 'test',
-      is_live: false,
-      id: 'test',
+      id: 1,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test.jpg',
-      time: 5,
-      description: 'test',
-      is_live: true,
-      id: 'test',    
+      id: 2,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test.jpg',
-      time: 5,
-      description: 'test',
-      is_live: false,
-      id: 'test',    
+      id: 3,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test.jpg',
-      time: 5,
-      description: 'test',
-      is_live: true,
-      id: 'test',    
+      id: 4,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test',
-      time: 5,
-      description: 'test',
-      is_live: false,
-      id: 'test',    
+      id: 5,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test',
-      time: 5,
-      description: 'test',
-      is_live: false,
-      id: 'test',    
+      id: 6,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
     {
-       title: 'test',
-      image: 'test',
-      time: 5,
-      description: 'test',
-      is_live: false,
-      id: 'test',    
+      id: 7,
+      name: 'To Do',
+      short_description: 'short desc',
+      long_description: 'long desc',
+      link: 'http://test.com',
+      repo_link: 'http://test.com',
+      app_video:'http://test.com',
+      is_live:true,
+      skills: [1, 2, 3]
     },
 
   ];
@@ -100,23 +125,23 @@ export default async function ProjectsPage() {
         {projects.map(project => (
           <Card key={project.id} className="flex flex-col justify-between mx-[20px]">
             <CardHeader className="flex-row gap-4 items-center">
-              <Avatar>
-                <AvatarImage src={'/img/${project.image}'} alt="project img"/>
-                <AvatarFallback>
-                  {project.title.slice(0,2)}
-                </AvatarFallback>
-              </Avatar>
               <div>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.time} mins to cook.</CardDescription>
+                <CardTitle>{project.name}</CardTitle>
+                <CardDescription>{project.short_description}</CardDescription>
               </div>
             </CardHeader>
             <CardContent>
-              <p>{project.description}</p>
+              <p>{project.long_description}</p>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button>View Recipe</Button>
-              {project.is_live && <Badge variant="secondary">Live!</Badge>}
+              <a href="{project.link}">
+                <Badge variant="secondary">
+                  <FaGithub className="w-[30px] h-[30px]"/>
+                </Badge>
+              </a>
+              <a href="{project.repo_link}">
+              {project.is_live && <Button>View Project</Button>}
+              </a>
             </CardFooter>
           </Card>
         ))}

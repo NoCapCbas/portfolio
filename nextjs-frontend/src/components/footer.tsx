@@ -1,4 +1,10 @@
 import Link from "next/link"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default function Footer() {
   return (
@@ -11,12 +17,22 @@ export default function Footer() {
           <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
             <GithubIcon className="h-5 w-5 text-black" />
           </Link>
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="http://localhost:8000/download-resume">
-            <FileIcon className="h-5 w-5 text-black" />
-          </Link>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="http://localhost:8000/download-resume">
+                  <FileIcon className="h-5 w-5 text-black" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Download Resume</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
         </div>
         <p className="text-xs text-gray-500 sm:order-2 md:text-sm/relaxed lg:order-1 lg:text-sm/relaxed xl:order-3 text-black dark:text-gray-400">
-          Damon Diaz, Inc. All rights reserved.
+          Made by <a href="/" className="text-black">Damon Diaz</a>
         </p>
       </div>
     </footer>

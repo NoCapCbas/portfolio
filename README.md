@@ -1,13 +1,11 @@
-# Portfolio App Deployment, using Django
+# Portfolio App Deployment, using Django + Next.js
 
 ## Setup Walkthrough
 
 ### Dependencies
 - Docker 
-- Update .env file
+- Update .env file SECRET_KEY, SUPER_USER_NAME, SUPER_USER_PASSWORD, SUPER_USER_EMAIL
 
-### Install Docker
-...
 
 ### git clone repo
 ...

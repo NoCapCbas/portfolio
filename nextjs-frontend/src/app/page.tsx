@@ -51,7 +51,7 @@ export default async function ProjectsPage() {
             <CardHeader className="flex-col gap-4 items-center text-center">
                 <CardTitle className="text-6xl font-bold">Damon Diaz</CardTitle>
                 <CardDescription className="text-2xl font-bold text-white">{"{Software Engineer}"}</CardDescription>
-                <Badge className="text-black bg-white text-xs" variant="default">Number of apps deployed: {numberOfApps}</Badge>
+                <Badge className="text-black bg-white text-xs" variant="secondary">Number of apps deployed: {numberOfApps}</Badge>
             </CardHeader>
             <CardContent>
               <div className="flex flex-row justify-center align-items h-[50px]">

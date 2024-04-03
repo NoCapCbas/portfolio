@@ -2,6 +2,8 @@
 
 # Main configuration for HTTPS
 localhost {
-  reverse_proxy /* http://portfolio_app_backend:8000
+  reverse_proxy /api/* http://portfolio_app_backend:8000
+
+  reverse_proxy /* http://portfolio_app_frontend:3001
 
 }

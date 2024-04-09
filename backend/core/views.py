@@ -104,6 +104,8 @@ def projects(request):
         projects = projects.filter(is_live=True)
 
     project_serializer = serializers.ProjectSerializer(projects, many=True)
+    response = Response(project_serializer.data)
+    response['Cache-Control'] = 'no-cache, no-store, must-revalidate'    
     return Response(project_serializer.data)
 
 @api_view(["GET", "PUT", "PATCH", "DELETE"])

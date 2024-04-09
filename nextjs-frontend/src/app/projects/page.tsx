@@ -24,94 +24,20 @@ interface Project {
 }
 
 async function getProjects(): Promise<Project[]> {
-  const result = await fetch('http://localhost:8000/projects');
-  
-  // delay response
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
-
-  // const result = [
-  //   {
-  //     id: 1,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 5,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 6,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //   {
-  //     id: 7,
-  //     name: 'To Do',
-  //     short_description: 'short desc',
-  //     long_description: 'long desc',
-  //     link: 'http://test.com',
-  //     repo_link: 'http://test.com',
-  //     app_video:'http://test.com',
-  //     is_live:true,
-  //     skills: [1, 2, 3]
-  //   },
-  //
-  // ];
-  // return result;
-  return result.json()
-}
+    try {
+    const response = await fetch('http://localhost:8000/api/projects');
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch projects');
+    }
+    
+    const data = await response.json();
+    console.log('Projects data:', data); // Log the data received from the API
+    return data;
+  } catch (error) {
+    console.error('Error fetching projects:', error); // Log any errors that occur during fetch
+    throw error;
+  }}
 
 export default async function ProjectsPage() {
   const projects = await getProjects();
@@ -134,12 +60,12 @@ export default async function ProjectsPage() {
               <p>{project.long_description}</p>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <a href="{project.link}">
+              <a href={project.repo_link}>
                 <Badge variant="secondary">
                   <FaGithub className="w-[30px] h-[30px]"/>
                 </Badge>
               </a>
-              <a href="{project.repo_link}">
+              <a href={project.link}>
               {project.is_live && <Button>View Project</Button>}
               </a>
             </CardFooter>

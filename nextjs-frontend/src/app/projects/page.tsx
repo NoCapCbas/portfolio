@@ -1,3 +1,6 @@
+"use client"
+
+import React, { useState, useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -23,24 +26,24 @@ interface Project {
   skills: string[],
 }
 
-async function getProjects(): Promise<Project[]> {
-    try {
-    const response = await fetch('http://localhost:8000/api/projects');
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch projects');
-    }
-    
-    const data = await response.json();
-    console.log('Projects data:', data); // Log the data received from the API
-    return data;
-  } catch (error) {
-    console.error('Error fetching projects:', error); // Log any errors that occur during fetch
-    throw error;
-  }}
-
 export default async function ProjectsPage() {
-  const projects = await getProjects();
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/projects');
+        if (!response.ok) {
+          throw new Error('Failed to fetch projects');
+        }
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+    fetchProjects();
+  }, []);
 
   return (
     <main className="flex flex-col w-full h-full justify-center align-items items-center px-[20px] xs:px-[20px] sm:px-[20px] md:px-[20px] lg:px-[20px] xl:px-[0px]">

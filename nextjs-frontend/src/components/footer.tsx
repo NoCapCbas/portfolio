@@ -63,8 +63,11 @@ const FileIcon: React.FC<FileIconProps> = (props) => {
   )
 }
 
+interface GithubIconProps {
+  [key: string]: any;
+}
 
-function GithubIcon(props) {
+const GithubIcon: React.FC<GithubIconProps> = (props) => {
   return (
     <svg
       {...props}
@@ -84,8 +87,11 @@ function GithubIcon(props) {
   )
 }
 
+interface LinkedinIconProps {
+  [key: string]: any;
+}
 
-function LinkedinIcon(props) {
+const LinkedinIcon: React.FC<LinkedinIconProps> = (props) => {
   return (
     <svg
       {...props}

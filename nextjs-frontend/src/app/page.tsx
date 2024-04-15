@@ -13,10 +13,15 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from "next/link";
 
+interface Skill {
+  description: string,
+  svg_icon_text: string,
+}
+
 export default async function ProjectsPage() {
   // State to store the number of apps
   const [numberOfApps, setNumberOfApps] = useState(0);
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState<Skill[]>([]);
 
   // Effect hook to fetch the number of apps on component mount
   useEffect(() => {

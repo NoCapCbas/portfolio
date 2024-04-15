@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="{inter.className}">
         <canvas></canvas>
-        <script src="/particles.js"></script>
         {children}
         <Footer/>
       </body>

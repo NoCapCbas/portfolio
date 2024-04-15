@@ -4,7 +4,7 @@ services:
   portfolio_app_frontend:
     container_name: portfolio_app_frontend
     build: 
-      contenxt: ./nextjs-frontend
+      context: ./nextjs-frontend
       dockerfile: next.dockerfile
     ports:
       - "3001:3001"

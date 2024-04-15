@@ -39,7 +39,11 @@ export default function Footer() {
   )
 }
 
-function FileIcon(props) {
+interface FileIconProps {
+  [key: string]: any;
+}
+
+const FileIcon: React.FC<FileIconProps> = (props) => {
   return (
     <svg
       {...props}

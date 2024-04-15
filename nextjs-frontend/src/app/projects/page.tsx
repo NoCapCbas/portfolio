@@ -27,7 +27,7 @@ interface Project {
 }
 
 export default async function ProjectsPage() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {

@@ -32,7 +32,7 @@ export default async function ProjectsPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/projects');
+        const response = await fetch('https://localhost/api/projects');
         if (!response.ok) {
           throw new Error('Failed to fetch projects');
         }

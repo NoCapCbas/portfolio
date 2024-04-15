@@ -27,7 +27,7 @@ export default async function ProjectsPage() {
   useEffect(() => {
     async function fetchNumberOfApps() {
       try {
-        const response = await fetch('http://localhost:8000/api/projects-deployed-count');
+        const response = await fetch('https://localhost/api/projects-deployed-count');
         const data = await response.json();
         setNumberOfApps(data.number_of_projects_deployed);
       } catch (error) {
@@ -37,7 +37,7 @@ export default async function ProjectsPage() {
 
     async function fetchSkills() {
       try {
-        const response = await fetch('http://localhost:8000/api/skills');
+        const response = await fetch('https://localhost/api/skills');
         const data = await response.json();
         setSkills(data);
       } catch (error) {

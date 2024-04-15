@@ -1,3 +1,8 @@
+# Portfolio App, using Django + Next.js
+- Frontend uses Next.js
+- Backend uses Django for content management and database management
+- Database uses Django's default sqlite.db
+
 # Portfolio App Deployment, using Django + Next.js
 
 ## Setup Walkthrough

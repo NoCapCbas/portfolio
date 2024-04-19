@@ -16,3 +16,6 @@ __pycache__/
 
 .DS_Store
 
+# Ignore static files
+**/static
+

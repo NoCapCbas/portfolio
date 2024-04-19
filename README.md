@@ -34,7 +34,7 @@ SUPER_USER_EMAIL='root@root.com'
 ### Run Docker
 Run the following docker command:
 ```shell
-docker compose up --build -d
+docker compose -f docker-compose.prod.yml up --build -d
 ```
 
 # Deployment

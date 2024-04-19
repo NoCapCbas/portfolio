@@ -5,15 +5,10 @@
 
 # Portfolio App Deployment, using Django + Next.js
 
-## Setup Walkthrough
-
-### Dependencies
-- Docker 
-- Update .env file SECRET_KEY, SUPER_USER_NAME, SUPER_USER_PASSWORD, SUPER_USER_EMAIL
-
-
 ### git clone repo
-...
+```shell
+git clone https://github.com/NoCapCbas/portfolio.git
+```
 
 ### Update .env file
 Navigate to the inside of the repo.
@@ -37,6 +32,5 @@ Run the following docker command:
 docker compose -f docker-compose.prod.yml up --build -d
 ```
 
-# Deployment
-- Follow Setup Walkthrough 
+### Update Caddyfile
 - Update Caddyfile and replace localhost with the domain of the application

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Head from 'next/head';
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
@@ -19,13 +18,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Head>
-        <script src="/particles.js" defer />
-      </Head>
       <body className="{inter.className}">
         <canvas></canvas>
         {children}
         <Footer/>
+        <script src="/particles.js" defer />
       </body>
     </html>
   );

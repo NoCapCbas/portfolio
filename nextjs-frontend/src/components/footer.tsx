@@ -11,12 +11,42 @@ export default function Footer() {
     <footer className="fixed bottom-0 w-full py-[5px] flex flex-col items-center justify-center bg-white dark:bg-gray-900">
       <div className="container flex flex-col gap-2 items-center justify-center md:justify-between lg:justify-between xl:justify-between px-4 text-center md:flex-row md:gap-4 md:px-6">
         <div className="flex items-center gap-2 text-sm sm:justify-center sm:gap-4 md:order-2 lg:order-1 lg:justify-start xl:order-2">
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://www.linkedin.com/in/damondiaz">
-            <LinkedinIcon className="h-5 w-5 text-black" />
-          </Link>
-          <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
-            <GithubIcon className="h-5 w-5 text-black" />
-          </Link>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://damondiaz.xyz">
+                  <HomeIcon className="h-5 w-5 text-black" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Home</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://www.linkedin.com/in/damondiaz">
+                  <LinkedinIcon className="h-5 w-5 text-black" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>LinkedIn</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
+                  <GithubIcon className="h-5 w-5 text-black" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Github</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -29,6 +59,18 @@ export default function Footer() {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://codecrusades.substack.com">
+                  <BlogIcon className="h-5 w-5 text-black" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Code Blog</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
 
         </div>
         <p className="text-xs text-gray-500 sm:order-2 md:text-sm/relaxed lg:order-1 lg:text-sm/relaxed xl:order-3 text-black dark:text-gray-400">
@@ -37,6 +79,30 @@ export default function Footer() {
       </div>
     </footer>
   )
+}
+
+interface HomeIconProps {
+  [key: string]: any;
+}
+
+const HomeIcon: React.FC<HomeIconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M3 9l9-7 9 7v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  );
 }
 
 interface FileIconProps {
@@ -110,5 +176,28 @@ const LinkedinIcon: React.FC<LinkedinIconProps> = (props) => {
       <circle cx="4" cy="4" r="2" />
     </svg>
   )
+}
+
+interface BlogIconProps {
+  [key: string]: any;
+}
+
+const BlogIcon: React.FC<BlogIconProps> = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M21 17H3V7h18v10zM15 9h3M15 13h5M6 9h5M6 13h5M4 3h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+    </svg>
+  );
 }
 

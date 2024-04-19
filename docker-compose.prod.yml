@@ -1,0 +1,32 @@
+version: '3.7'
+
+services: 
+  portfolio_app_frontend:
+    container_name: portfolio_app_frontend
+    build: 
+      context: ./nextjs-frontend
+      dockerfile: next.dockerfile
+    depends_on:
+      - portfolio_app_backend
+
+  portfolio_app_backend:
+    container_name: portfolio_app_backend
+    build: 
+      context: ./backend
+      dockerfile: django.dockerfile 
+    image: portfolio_app_backend
+    env_file: .env
+
+  portfolio_caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    container_name: portfolio_caddy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./static:/backend/static
+    depends_on:
+      - portfolio_app_backend
+      - portfolio_app_frontend

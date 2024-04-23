@@ -32,7 +32,6 @@ services:
       - 443:443
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
-      - ./static:/backend/static
     depends_on:
       - portfolio_backend
       - portfolio_frontend

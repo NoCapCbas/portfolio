@@ -8,7 +8,7 @@ This project serves as a hub to show clients/employers my projects, resume and o
 
 # Application Architecture Overview
 
-![Image Alt Text](./readme/portfolio-system-design-overview.png)
+![Image Alt Text](./portfolio-system-design-overview.png)
 
 ## Components:
 ### Django Backend:

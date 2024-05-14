@@ -50,7 +50,7 @@ export default function Footer() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="http://localhost:8000/download-resume">
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="/download-resume">
                   <FileIcon className="h-5 w-5 text-black" />
                 </Link>
               </TooltipTrigger>

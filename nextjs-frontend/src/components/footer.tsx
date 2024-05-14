@@ -27,7 +27,9 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://www.linkedin.com/in/damondiaz">
+                  <a target="_blank">
                   <LinkedinIcon className="h-5 w-5 text-black" />
+                  </a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -39,7 +41,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
-                  <GithubIcon className="h-5 w-5 text-black" />
+                  <a><GithubIcon className="h-5 w-5 text-black" /></a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -51,7 +53,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="/download-resume">
-                  <FileIcon className="h-5 w-5 text-black" />
+                  <a><FileIcon className="h-5 w-5 text-black" /></a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -63,7 +65,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://codecrusades.substack.com">
-                  <BlogIcon className="h-5 w-5 text-black" />
+                  <a><BlogIcon className="h-5 w-5 text-black" /></a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>

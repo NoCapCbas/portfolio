@@ -31,7 +31,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/TestCaddyfile:/etc/caddy/Caddyfile
     depends_on:
       - portfolio_backend
       - portfolio_frontend

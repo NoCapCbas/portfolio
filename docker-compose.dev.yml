@@ -19,7 +19,7 @@ services:
     image: portfolio_backend
     ports: 
       - "8000:8000"
-    env_file: .env
+    env_file: ./config/.env
     volumes:
       - ./backend:/backend:cached
 
@@ -31,7 +31,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./caddy/TestCaddyfile:/etc/caddy/Caddyfile
+      - ./config/DevCaddyfile:/etc/caddy/Caddyfile
     depends_on:
       - portfolio_backend
       - portfolio_frontend

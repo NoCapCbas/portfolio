@@ -35,15 +35,17 @@ else:
 ALLOWED_HOSTS = [
         'localhost',
         'damondiaz.xyz'
-        ]
+]
+
 CSRF_TRUSTED_ORIGINS = [
         'http://localhost',
         'https://localhost',
         'http://damondiaz.xyz',
         'https://damondiaz.xyz',
-    ]
+]
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",        
+    "http://localhost:3001",        
     'https://localhost',
     'https://damondiaz.xyz',
 ]

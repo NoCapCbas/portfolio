@@ -18,33 +18,34 @@ interface Skill {
   svg_icon_text: string,
 }
 
-export default async function ProjectsPage() {
+export default function ProjectsPage() {
+  const urlBase = process.env.NEXT_PUBLIC_URL;
   // State to store the number of apps
   const [numberOfApps, setNumberOfApps] = useState(0);
   const [skills, setSkills] = useState<Skill[]>([]);
 
+  async function fetchNumberOfApps() {
+    try {
+      const response = await fetch(`${urlBase}/api/projects-deployed-count`);
+      const data = await response.json();
+      setNumberOfApps(data.number_of_projects_deployed);
+    } catch (error) {
+      console.error("Failed to fetch number of apps", error);
+    }
+  };
+
+  async function fetchSkills() {
+    try {
+      const response = await fetch(`${urlBase}/api/skills`);
+      const data = await response.json();
+      setSkills(data);
+    } catch (error) {
+      console.error("Failed to fetch skills", error);
+    }
+  }
+
   // Effect hook to fetch the number of apps on component mount
   useEffect(() => {
-    async function fetchNumberOfApps() {
-      try {
-        const response = await fetch('https://damondiaz.xyz/api/projects-deployed-count');
-        const data = await response.json();
-        setNumberOfApps(data.number_of_projects_deployed);
-      } catch (error) {
-        console.error("Failed to fetch number of apps", error);
-      }
-    };
-
-    async function fetchSkills() {
-      try {
-        const response = await fetch('https://damondiaz.xyz/api/skills');
-        const data = await response.json();
-        setSkills(data);
-      } catch (error) {
-        console.error("Failed to fetch skills", error);
-      }
-    }
-
     fetchNumberOfApps();
     fetchSkills()
   }, [])

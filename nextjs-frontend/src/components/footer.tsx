@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Footer() {
+  const urlBase = process.env.NEXT_PUBLIC_URL;
+
   return (
     <footer className="fixed bottom-0 w-full py-[5px] flex flex-col items-center justify-center bg-white dark:bg-gray-900">
       <div className="container flex flex-col gap-2 items-center justify-center md:justify-between lg:justify-between xl:justify-between px-4 text-center md:flex-row md:gap-4 md:px-6">
@@ -14,7 +16,7 @@ export default function Footer() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://damondiaz.xyz">
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}`}>
                   <HomeIcon className="h-5 w-5 text-black" />
                 </Link>
               </TooltipTrigger>
@@ -52,7 +54,7 @@ export default function Footer() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="/download-resume">
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}/api/download-resume`}>
                   <a><FileIcon className="h-5 w-5 text-black" /></a>
                 </Link>
               </TooltipTrigger>

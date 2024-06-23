@@ -26,22 +26,25 @@ interface Project {
   skills: string[],
 }
 
-export default async function ProjectsPage() {
+export default function ProjectsPage() {
+  const urlBase = process.env.NEXT_PUBLIC_URL;
+
   const [projects, setProjects] = useState<Project[]>([]);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch('https://damondiaz.xyz/api/projects');
-        if (!response.ok) {
-          throw new Error('Failed to fetch projects');
-        }
-        const data = await response.json();
-        setProjects(data);
-      } catch (error) {
-        console.error('Error fetching projects:', error);
+  async function fetchProjects() {
+    try {
+      const response = await fetch(`${urlBase}/api/projects`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch projects');
       }
-    };
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    }
+  };
+
+  useEffect(() => {
     fetchProjects();
   }, []);
 

@@ -15,7 +15,7 @@ services:
       context: ./backend
       dockerfile: django.dockerfile 
     image: portfolio_backend
-    env_file: .env
+    env_file: ./config/.env
 
   portfolio_caddy:
     image: caddy:latest

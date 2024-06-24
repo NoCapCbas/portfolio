@@ -8,6 +8,7 @@ import {
 
 export default function Footer() {
   const urlBase = process.env.NEXT_PUBLIC_URL;
+  const urlHome = process.env.NEXT_PUBLIC_HOME;
 
   return (
     <footer className="fixed bottom-0 w-full py-[5px] flex flex-col items-center justify-center bg-white dark:bg-gray-900">
@@ -16,12 +17,40 @@ export default function Footer() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}`}>
-                  <HomeIcon className="h-5 w-5 text-black" />
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlHome}`}>
+                  Home
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Home</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}/api/download-resume`}>
+                  <a>
+                    Resume
+                  </a>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Download Resume</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://codecrusades.substack.com">
+                  <a>
+                    Blog
+                  </a>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Code Blog</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -48,30 +77,6 @@ export default function Footer() {
               </TooltipTrigger>
               <TooltipContent>
                 <p>Github</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}/api/download-resume`}>
-                  <a><FileIcon className="h-5 w-5 text-black" /></a>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Download Resume</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://codecrusades.substack.com">
-                  <a><BlogIcon className="h-5 w-5 text-black" /></a>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Code Blog</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

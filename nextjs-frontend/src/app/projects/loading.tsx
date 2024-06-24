@@ -6,7 +6,7 @@ export default function loading() {
       <div className="flex flex-col justify-start w-full py-[20px]">
         <h1 className="text-white"></h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-[50px] xl:py-[50px] overflow-y-auto w-full" >
+      <div className="grid grid-cols-1 gap-8 py-[50px] xl:py-[50px] overflow-y-auto w-full" >
         {"abcdefghi".split('').map(i => (
           <SkeletonCard key={i} />
         ))}

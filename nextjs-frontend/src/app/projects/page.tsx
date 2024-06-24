@@ -21,7 +21,7 @@ interface Project {
   live_link: string,
   repo_link: string,
   app_video: string,
-  skills: string[],
+  skill_names: string[],
 }
 
 export default function ProjectsPage() {
@@ -61,8 +61,14 @@ export default function ProjectsPage() {
             </CardHeader>
             <CardContent>
               <p>{project.description}</p>
+              <div>
+              {project.skill_names.map((skill,index) => (
+                <Badge key={index} variant="secondary" className="m-1">{skill}</Badge>
+                ))}
+              </div>
             </CardContent>
             <CardFooter className="flex justify-between">
+
               <a href={project.repo_link}>
                 <Badge variant="secondary">
                   <FaGithub className="w-[30px] h-[30px]"/>

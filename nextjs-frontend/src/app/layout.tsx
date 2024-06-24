@@ -22,7 +22,6 @@ export default function RootLayout({
         <canvas></canvas>
         {children}
         <Footer/>
-        <script src="/particles.js" defer />
       </body>
     </html>
   );

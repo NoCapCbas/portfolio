@@ -7,7 +7,7 @@ from . import models
 
 class ProjectAdmin(admin.ModelAdmin):
     model = models.Project
-    list_display = ['name', 'is_live', 'link', 'repo_link', 'list_display_skills']
+    list_display = ['name', 'live_link', 'repo_link', 'list_display_skills']
 
     def list_display_skills(self, obj):
         return ', '.join(skill.name for skill in obj.skills.all())

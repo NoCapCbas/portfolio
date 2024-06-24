@@ -17,12 +17,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface Project {
   id: number,
   name: string,
-  short_description: string,
-  long_description: string,
-  link: string,
+  description: string,
+  live_link: string,
   repo_link: string,
   app_video: string,
-  is_live: boolean,
   skills: string[],
 }
 
@@ -59,11 +57,10 @@ export default function ProjectsPage() {
             <CardHeader className="flex-row gap-4 items-center">
               <div>
                 <CardTitle>{project.name}</CardTitle>
-                <CardDescription>{project.short_description}</CardDescription>
               </div>
             </CardHeader>
             <CardContent>
-              <p>{project.long_description}</p>
+              <p>{project.description}</p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <a href={project.repo_link}>
@@ -71,8 +68,8 @@ export default function ProjectsPage() {
                   <FaGithub className="w-[30px] h-[30px]"/>
                 </Badge>
               </a>
-              <a href={project.link}>
-              {project.is_live && <Button>View Live Project</Button>}
+              <a href={project.live_link}>
+                {project.live_link && <Button>View Live Project</Button>}
               </a>
             </CardFooter>
           </Card>

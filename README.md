@@ -6,6 +6,8 @@ This project serves as a hub to show clients/employers my projects, resume and o
 - Backend uses Django for content management and database management
 - Database uses Django's default db.sqlite3
 
+svg icons provided by https://devicon.dev
+
 # Application Architecture Overview
 
 ![Image Alt Text](./portfolio-system-design-overview.png)

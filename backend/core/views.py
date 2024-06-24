@@ -57,7 +57,7 @@ def projects_deployed_count(request):
     """
     context = {}
 
-    number_of_projects_deployed = models.Project.objects.filter(is_live=True).count()
+    number_of_projects_deployed = models.Project.objects.filter(live_link__isnull=False).count()
     context['number_of_projects_deployed'] = number_of_projects_deployed
     return Response(context, status=status.HTTP_200_OK)
 
@@ -101,7 +101,7 @@ def projects(request):
 
     is_live = request.query_params.get('is_live', None)
     if is_live is not None:
-        projects = projects.filter(is_live=True)
+        projects = projects.filter(live_link__isnull=False)
 
     project_serializer = serializers.ProjectSerializer(projects, many=True)
     response = Response(project_serializer.data)

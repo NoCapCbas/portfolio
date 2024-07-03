@@ -6,6 +6,8 @@ services:
     build: 
       context: ./nextjs-frontend
       dockerfile: next.dockerfile
+    ports:
+      - "8001:8000"
     depends_on:
       - portfolio_backend
 
@@ -16,16 +18,5 @@ services:
       dockerfile: django.dockerfile 
     image: portfolio_backend
     env_file: ./config/.env
-
-  portfolio_caddy:
-    image: caddy:latest
-    restart: unless-stopped
-    container_name: portfolio_caddy
     ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./config/Caddyfile:/etc/caddy/Caddyfile
-    depends_on:
-      - portfolio_backend
-      - portfolio_frontend
+      - "3001:3001" 

@@ -7,7 +7,7 @@ services:
       context: ./nextjs-frontend
       dockerfile: next.dockerfile
     ports:
-      - "8001:8000"
+      - "3001:3000"
     depends_on:
       - portfolio_backend
 
@@ -19,4 +19,4 @@ services:
     image: portfolio_backend
     env_file: ./config/.env
     ports:
-      - "3001:3001" 
+      - "8001:8000" 

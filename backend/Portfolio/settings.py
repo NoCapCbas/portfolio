@@ -30,11 +30,7 @@ if SECRET_KEY is None:
 if DEBUG is None:
     DEBUG = True
 
-ALLOWED_HOSTS = [
-        'localhost',
-        'damondiaz.xyz',
-        '127.0.0.1'
-]
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
@@ -43,11 +39,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://damondiaz.xyz',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3001",        
-    'https://localhost',
-    'https://damondiaz.xyz',
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 

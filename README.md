@@ -25,10 +25,6 @@ Integrates with the Django backend via RESTful API endpoints to fetch and manipu
 Lightweight SQL database used for storing application data.
 Utilized by the Django backend to persist data models and application state.
 Provides relational database capabilities for efficient data storage and retrieval.
-### Caddy Web Server:
-Acts as the HTTP server and reverse proxy for serving the Django backend and Next.js frontend.
-Handles requests, manages SSL/TLS encryption, and provides static file serving capabilities.
-Enables efficient routing of requests to the appropriate backend or frontend components.
 ## Interactions:
 The Next.js frontend communicates with the Django backend via RESTful API endpoints to retrieve and manipulate data.
 The Django backend interacts with the SQLite database to perform CRUD (Create, Read, Update, Delete) operations on application data.
@@ -62,19 +58,6 @@ SUPER_USER_NAME='root'
 SUPER_USER_PASSWORD='root'
 SUPER_USER_EMAIL='root@root.com'
 ```
-#### Update Caddyfile
-Caddyfile should look like the following:
-```shell
-# Main configuration for HTTPS
-localhost {
-  log
-
-  reverse_proxy /api/* http://portfolio_backend:8000
-
-  reverse_proxy /* http://portfolio_frontend:3001
-}
-
-```
 
 #### Run Docker
 Run the following docker command:
@@ -85,15 +68,13 @@ docker compose -f docker-compose.test.yml up --build -d
 #### Django Admin
 Log in with root user.
 
-### Live Deployment
+### Live Deployment using Coolify
 #### git clone repo
 ```shell
 git clone https://github.com/NoCapCbas/portfolio.git
 ```
 
-#### Update .env file for live deployment
-Navigate to inside of the repo.
-Update the .env file within the main project directory:
+#### Update env variables in coolify settings for live deployment
 ```shell
 ## python settings
 PYTHONUNBUFFERED=1
@@ -109,20 +90,6 @@ SUPER_USER_PASSWORD='root'
 SUPER_USER_EMAIL='root@root.com'
 ```
 Change SECRET_KEY 
-
-#### Update Caddyfile
-Caddyfile should look like the following:
-```shell
-# Main configuration for HTTPS
-damondiaz.xyz {
-  log
-
-  reverse_proxy /api/* http://portfolio_backend:8000
-
-  reverse_proxy /* http://portfolio_frontend:3001
-}
-
-```
 
 #### Run Docker
 Run the following docker command:

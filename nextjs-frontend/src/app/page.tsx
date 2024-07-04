@@ -19,7 +19,7 @@ interface Skill {
 }
 
 export default function ProjectsPage() {
-  const urlBase = process.env.NEXT_PUBLIC_BASE;
+  const urlBase = process.env.NEXT_PUBLIC_BASE || 'https://admin.damondiaz.xyz';
   // State to store the number of apps
   const [numberOfApps, setNumberOfApps] = useState(0);
   const [skills, setSkills] = useState<Skill[]>([]);

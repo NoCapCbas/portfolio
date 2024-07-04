@@ -12,6 +12,8 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link"
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface Project {
@@ -69,14 +71,14 @@ export default function ProjectsPage() {
             </CardContent>
             <CardFooter className="flex justify-between">
 
-              <a href={project.repo_link}>
+              <Link href={project.repo_link}>
                 <Badge variant="secondary">
                   <FaGithub className="w-[30px] h-[30px]"/>
                 </Badge>
-              </a>
-              <a href={project.live_link}>
+              </Link>
+              <Link href={project.live_link}>
                 {project.live_link && <Button>View Live Project</Button>}
-              </a>
+              </Link>
             </CardFooter>
           </Card>
         ))}

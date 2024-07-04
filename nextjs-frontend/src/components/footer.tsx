@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
+
 export default function Footer() {
   const urlBase = process.env.NEXT_PUBLIC_BASE || 'https://admin.damondiaz.xyz';
   const urlHome = process.env.NEXT_PUBLIC_HOME || 'https://damondiaz.xyz';
@@ -30,9 +31,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href={`${urlBase}/api/download-resume`}>
-                  <a>
                     Resume
-                  </a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -44,9 +43,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://codecrusades.substack.com">
-                  <a>
                     Blog
-                  </a>
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -72,7 +69,7 @@ export default function Footer() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="https://github.com/NoCapCbas">
-                  <a><GithubIcon className="h-5 w-5 text-black" /></a>
+                  <GithubIcon className="h-5 w-5 text-black" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -83,7 +80,7 @@ export default function Footer() {
 
         </div>
         <p className="text-xs text-gray-500 sm:order-2 md:text-sm/relaxed lg:order-1 lg:text-sm/relaxed xl:order-3 text-black dark:text-gray-400">
-          Made by <a href="/" className="text-black">Damon Diaz</a>
+          Made by <Link href="/" className="text-black">Damon Diaz</Link>
         </p>
       </div>
     </footer>

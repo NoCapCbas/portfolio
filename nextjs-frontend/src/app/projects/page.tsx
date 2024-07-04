@@ -25,7 +25,7 @@ interface Project {
 }
 
 export default function ProjectsPage() {
-  const urlBase = process.env.NEXT_PUBLIC_BASE;
+  const urlBase = process.env.NEXT_PUBLIC_BASE || 'https://admin.damondiaz.xyz';
 
   const [projects, setProjects] = useState<Project[]>([]);
 

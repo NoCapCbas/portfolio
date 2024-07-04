@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Footer() {
-  const urlBase = process.env.NEXT_PUBLIC_URL;
+  const urlBase = process.env.NEXT_PUBLIC_BASE;
   const urlHome = process.env.NEXT_PUBLIC_HOME;
 
   return (

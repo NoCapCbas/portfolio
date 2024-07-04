@@ -37,7 +37,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://localhost',
     'http://damondiaz.xyz',
     'https://damondiaz.xyz',
-    'https://backend.damondiaz.xyz',
+    'https://admin.damondiaz.xyz',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True

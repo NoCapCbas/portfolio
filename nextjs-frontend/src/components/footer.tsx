@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Footer() {
-  const urlBase = process.env.NEXT_PUBLIC_BASE;
-  const urlHome = process.env.NEXT_PUBLIC_HOME;
+  const urlBase = process.env.NEXT_PUBLIC_BASE || 'https://admin.damondiaz.xyz';
+  const urlHome = process.env.NEXT_PUBLIC_HOME || 'https://damondiaz.xyz';
 
   return (
     <footer className="fixed bottom-0 w-full py-[5px] flex flex-col items-center justify-center bg-white dark:bg-gray-900">

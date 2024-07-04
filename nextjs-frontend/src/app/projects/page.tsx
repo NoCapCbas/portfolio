@@ -25,7 +25,7 @@ interface Project {
 }
 
 export default function ProjectsPage() {
-  const urlBase = process.env.NEXT_PUBLIC_URL;
+  const urlBase = process.env.NEXT_PUBLIC_BASE;
 
   const [projects, setProjects] = useState<Project[]>([]);
 

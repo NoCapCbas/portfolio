@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from 'next/head';
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
@@ -18,6 +19,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Head>
+        <script defer data-domain="damondiaz.xyz" src="https://plausible-y80sssg.damondiaz.xyz/js/script.js"></script>
+      </Head>
       <body className="{inter.className}">
         <canvas></canvas>
         {children}

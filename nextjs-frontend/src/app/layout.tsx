@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="{inter.className}">
-        <script defer data-domain="damondiaz.xyz" src="https://plausible-y80sssg.damondiaz.xyz/js/script.js"></script>
+        <script defer data-domain="damondiaz.xyz" src="https://plausible.damondiaz.xyz/js/script.js"></script>
 
         <canvas></canvas>
         {children}

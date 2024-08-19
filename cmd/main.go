@@ -18,8 +18,9 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   // parse template file
   tmpl, err := template.ParseFiles("templates/index.html", "templates/nav.html")
   if err != nil {
-    log.Println(err)
+    log.Println("Error parsing templates: ", err)
     http.Error(w, "Could not load template: ", http.StatusInternalServerError)
+    return
   }
 
   // create some data to pass to the template
@@ -31,13 +32,17 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   // execute the template and pass the data
   err = tmpl.Execute(w, data)
   if err != nil {
-    log.Println(err)
+    log.Println("Error executing template: ", err)
     http.Error(w, "Could not render template", http.StatusInternalServerError)
   }
 
 }
 
 func main() {
+  // serve static files
+  fs := http.FileServer(http.Dir("static"))
+  http.Handle("/static/", http.StripPrefix("/static/", fs))
+
   // pass porfolio handler to server
   http.HandleFunc("/", indexHandler)
   

@@ -16,9 +16,9 @@ __pycache__/
 
 .DS_Store
 
-# Ignore static files
-**/static
-
 # Ignore .env files
 **/.env
+
+# 
+package-lock.json
 

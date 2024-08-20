@@ -9,6 +9,10 @@
     <link href="/static/output.css" rel="stylesheet">
     <!--alpinejs-->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <!-- Navigation Menu Section-->
@@ -31,5 +35,81 @@
 
 
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hackElements = document.querySelectorAll('.hack-effect');
+
+    hackElements.forEach(element => {
+        const originalSpans = Array.from(element.children);
+        const possibleChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        let interval;
+
+        element.addEventListener('mouseenter', () => {
+            let iteration = 0;
+            clearInterval(interval);
+
+            interval = setInterval(() => {
+                originalSpans.forEach((span, index) => {
+                    if (index < iteration) {
+                        span.textContent = span.dataset.originalText;
+                    } else {
+                        span.textContent = possibleChars[Math.floor(Math.random() * possibleChars.length)];
+                    }
+                });
+
+                if (iteration >= originalSpans.length) {
+                    clearInterval(interval);
+                }
+
+                iteration += 1 / 3;
+            }, 15);
+        });
+
+        element.addEventListener('mouseleave', () => {
+            clearInterval(interval);
+            originalSpans.forEach(span => {
+                span.textContent = span.dataset.originalText;
+            });
+        });
+
+        // Store original text in data attribute
+        originalSpans.forEach(span => {
+            span.dataset.originalText = span.textContent;
+        });
+    });
+});
+
+// Glitch effect function
+function glitchText() {
+    const glitchElements = document.querySelectorAll('.glitch-effect');
+    const possibleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}[]|;:,.<>?';
+
+    glitchElements.forEach(element => {
+        const originalText = element.textContent;
+        const textLength = originalText.length;
+
+        setInterval(() => {
+            let glitchedText = '';
+            for (let i = 0; i < textLength; i++) {
+                if (Math.random() < 0.1) { // 10% chance to glitch each character
+                    glitchedText += possibleChars[Math.floor(Math.random() * possibleChars.length)];
+                } else {
+                    glitchedText += originalText[i];
+                }
+            }
+            element.textContent = glitchedText;
+
+            // Reset to original text after a short delay
+            setTimeout(() => {
+                element.textContent = originalText;
+            }, 100);
+        }, 2000); // Glitch every 3 seconds
+    });
+}
+
+// Call the glitch effect function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', glitchText);
+
+</script>
 </html>
 

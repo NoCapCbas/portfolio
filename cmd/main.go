@@ -1,55 +1,63 @@
 package main
 
 import (
-  "log"
-  "net/http"
-  "html/template"
+	"html/template"
+	"log"
+	"net/http"
 )
 
 type PageData struct {
-  Title string
-  Message string
+	Title   string
+	Message string
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-  
-  // main portfolio handler
 
-  // parse template file
-  tmpl, err := template.ParseFiles("templates/index.html", "templates/nav.html")
-  if err != nil {
-    log.Println("Error parsing templates: ", err)
-    http.Error(w, "Could not load template: ", http.StatusInternalServerError)
-    return
-  }
+	// main portfolio handler
 
-  // create some data to pass to the template
-  data := PageData{
-    Title: "title",
-    Message: "message",
-  }
+	// parse template file
+	tmpl, err := template.ParseFiles(
+		"templates/index.html",
+		"templates/partials/nav.html",
+		"templates/partials/hero.html",
+		"templates/partials/about.html",
+		"templates/partials/skills.html",
+		"templates/partials/projects.html",
+		"templates/partials/contact.html",
+	)
+	if err != nil {
+		log.Println("Error parsing templates: ", err)
+		http.Error(w, "Could not load template: ", http.StatusInternalServerError)
+		return
+	}
 
-  // execute the template and pass the data
-  err = tmpl.Execute(w, data)
-  if err != nil {
-    log.Println("Error executing template: ", err)
-    http.Error(w, "Could not render template", http.StatusInternalServerError)
-  }
+	// create some data to pass to the template
+	data := PageData{
+		Title:   "title",
+		Message: "message",
+	}
+
+	// execute the template and pass the data
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		log.Println("Error executing template: ", err)
+		http.Error(w, "Could not render template", http.StatusInternalServerError)
+	}
 
 }
 
 func main() {
-  // serve static files
-  fs := http.FileServer(http.Dir("static"))
-  http.Handle("/static/", http.StripPrefix("/static/", fs))
+	// serve static files
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-  // pass porfolio handler to server
-  http.HandleFunc("/", indexHandler)
-  
-  // start server
-  log.Println("Listening on port :8010...")
-  err := http.ListenAndServe(":8010", nil)
-  if err != nil {
-    log.Fatal("ListenAndServe: ", err)
-  }
+	// pass porfolio handler to server
+	http.HandleFunc("/", indexHandler)
+
+	// start server
+	log.Println("Listening on port :8010...")
+	err := http.ListenAndServe(":8010", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }

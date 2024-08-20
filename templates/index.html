@@ -12,27 +12,23 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
     <!-- Navigation Menu Section-->
-    <section class="fixed bottom-8 left-1/2 -translate-x-1/2 text-zinc-500">
-      {{ template "nav" . }}
-      
-    </section>
-
+    {{ template "nav" . }}      
 
     <!-- Hero Section -->
-    <header class="bg-white shadow">
-    </header>
+    {{ template "hero" . }}
 
     <!-- About Section -->
-    <section class="container mx-auto px-6 py-12">
-    </section>
+    {{ template "about" . }}
+
+    <!-- Skills Section -->
+    {{ template "skills" . }}
 
     <!-- Projects Section -->
-    <section class="container mx-auto px-6 py-12">
-    </section>
+    {{ template "projects" . }}
 
-    <!-- Footer -->
-    <footer class="bg-white shadow py-4 mt-8">
-    </footer>
+    <!-- Contact Section -->
+    {{ template "contact" . }}
+
 
 </body>
 </html>

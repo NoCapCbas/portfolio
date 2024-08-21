@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Glitch effect function
 function glitchText() {
     const glitchElements = document.querySelectorAll('.glitch-effect');
-    const possibleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}[]|;:,.<>?';
-
+    //const possibleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}[]|;:,.<>?';
+    const possibleChars = 'abcdefghijklmnopqrstuvwxyz';
     glitchElements.forEach(element => {
         const originalText = element.textContent;
         const textLength = originalText.length;

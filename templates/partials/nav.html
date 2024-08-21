@@ -1,40 +1,45 @@
 {{ define "nav" }}
 <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 text-zinc-500 mx-auto w-max mt-8 h-[58px] p-2 flex gap-2 rounded-full border bg-white items-center">
 
-  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full">
-    <a href="#about">
+  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full" x-data="{ tooltip: false }">
+    <a href="#about" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false" x-on:click.prevent="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})" class="relative">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-2">
         <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
       </svg>
+      <span x-show="tooltip" class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded py-1 px-2 mb-2">About</span>
     </a>
   </div>
-  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full">
-    <a href="#projects">
+  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full" x-data="{ tooltip: false }">
+    <a href="#projects" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false" x-on:click.prevent="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})" class="relative">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
     </svg>
+    <span x-show="tooltip" class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded py-1 px-2 mb-2">Projects</span>
     </a>
   </div>
 
   <div class="w-[1px] bg-zinc-300 h-7">
   </div>
 
-  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full">
-    <a target="_blank" href="https://github.com/NoCapCbas">
+  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full" x-data="{ tooltip: false }">
+    <a target="_blank" href="https://github.com/NoCapCbas" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false" class="relative">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-6 h-6 stroke-2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
       </svg>
+      <span x-show="tooltip" class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded py-1 px-2 mb-2">GitHub</span>
     </a>
   </div>
-  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full">
-    <a target="_blank" href="https://linkedin.com/in/damondiaz">
+  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full" x-data="{ tooltip: false }">
+    <a target="_blank" href="https://linkedin.com/in/damondiaz" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false" class="relative">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-6 h-6 stroke-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      <span x-show="tooltip" class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded py-1 px-2 mb-2">LinkedIn</span>
     </a>
   </div>
-  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full">
-    <a target="_blank" href="/damondiaz-resume">
+  <div class="flex aspect-square cursor-pointer items-center justify-center rounded-full" x-data="{ tooltip: false }">
+    <a target="_blank" href="/damondiaz-resume" x-on:mouseenter="tooltip = true" x-on:mouseleave="tooltip = false" class="relative">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
       </svg>
+      <span x-show="tooltip" class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs rounded py-1 px-2 mb-2">Resume</span>
     </a>
   </div>
 

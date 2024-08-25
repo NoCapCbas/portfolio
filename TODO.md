@@ -1,4 +1,2 @@
-- center sections better, make it more responsive
-- revise projects
 - update dockerfiles
 - deploy to prod

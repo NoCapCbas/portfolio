@@ -1,24 +1,14 @@
 version: '3.7'
 
 services: 
-  portfolio_frontend:
-    container_name: portfolio_frontend
-    build: 
-      context: ./nextjs-frontend
-      dockerfile: next.dockerfile
+  portfolio:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
     ports:
-      - "3001:3001"
-    depends_on:
-      - portfolio_backend
-
-  portfolio_backend:
-    container_name: portfolio_backend
-    build: 
-      context: ./backend
-      dockerfile: django.dockerfile 
-    image: portfolio_backend
-    ports: 
-      - "8001:8000"
-    env_file: ./config/.env
+      - "8080:8080"
     volumes:
-      - ./backend:/backend:cached
+      - .:/app
+    environment:
+      - ENV=development
+    command: go run main.go

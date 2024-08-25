@@ -1,22 +1,12 @@
 version: '3.7'
 
-services: 
-  portfolio_frontend:
-    container_name: portfolio_frontend
-    build: 
-      context: ./nextjs-frontend
-      dockerfile: next.dockerfile
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
     ports:
-      - "3001:3000"
-    depends_on:
-      - portfolio_backend
-
-  portfolio_backend:
-    container_name: portfolio_backend
-    build: 
-      context: ./backend
-      dockerfile: django.dockerfile 
-    image: portfolio_backend
-    env_file: ./config/.env
-    ports:
-      - "8001:8000" 
+      - "8080:8080"
+    environment:
+      - ENV=production
+    restart: always

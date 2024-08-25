@@ -31,3 +31,7 @@ go run ./cmd/main.go
 # To add a new project...
 copy the templates from templates/projects/
 
+## design inspo
+https://www.hudy9x.com
+
+

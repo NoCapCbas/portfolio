@@ -29,8 +29,6 @@ COPY --from=builder /app/main .
 COPY --from=builder /app/templates ./templates
 COPY --from=builder /app/static ./static
 
-# Expose the port the app runs on
-EXPOSE 8080
 
 # Run the binary
 CMD ["./main"]

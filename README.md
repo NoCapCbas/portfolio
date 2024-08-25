@@ -12,6 +12,22 @@ This project serves as a minimalist hub to show clients/employers my projects, r
 - icons, sourced from https://heroicons.com/
 
 # Development
-## to refresh tailwind files...
+
+## to install dependencies...
+```bash
 npm install
-npx tailwindcss -i ./static/input.css -o ./static/output.css --watch
+```
+
+## to refresh tailwind files...
+```bash
+npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+```
+
+## run the project...
+```bash
+go run ./cmd/main.go
+```
+
+# To add a new project...
+copy the templates from templates/projects/
+

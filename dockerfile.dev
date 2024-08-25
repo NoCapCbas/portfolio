@@ -16,8 +16,5 @@ RUN go mod download
 # Copy the source code
 COPY . .
 
-# Expose the port the app runs on
-EXPOSE 8080
-
 # Run the application using Air for live reloading
 CMD ["air", "-c", ".air.toml"]

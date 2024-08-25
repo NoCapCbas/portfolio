@@ -6,12 +6,15 @@ This project serves as a minimalist hub to show clients/employers my projects, r
 - alpinejs
 - tailwindcss
 
-<!-- # Application Architecture Overview -->
-
 # Resources
 - icons, sourced from https://heroicons.com/
 
 # Development
-## to refresh tailwind files...
+## install dependencies...
+```bash
 npm install
+```
+## to refresh tailwind files...
+```bash
 npx tailwindcss -i ./static/input.css -o ./static/output.css --watch
+```

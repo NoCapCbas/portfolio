@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: go mod tidy  # Use go mod tidy for dependencies
       - name: Build
-        run: go build -v ./build/...
+        run: go build -v ./...
       - name: Test with the Go CLI
         run: go test ./...
 
@@ -46,6 +46,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
+          dockerfile: dockerfile.prod
           push: true
           tags: |
             cbasny/portfolio:prod

@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4  # Consistent version for checkout
+      - uses: actions/checkout@v4
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -27,7 +27,7 @@ jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4  # Consistent version for checkout
+      - uses: actions/checkout@v4
 
       - name: Set short git commit SHA
         id: vars
@@ -38,7 +38,7 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v2
         with:
-          registry: https://index.docker.io/v1/  # Use Docker Hub by default or your private registry
+          registry: https://index.docker.io/v1/
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -50,4 +50,4 @@ jobs:
           tags: |
             cbasny/portfolio:prod
             cbasny/portfolio:${{ steps.vars.outputs.COMMIT_SHORT_SHA }}  # Optional tag based on commit
-         tags: cbasny/portfolio:prod
+

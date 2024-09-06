@@ -1,4 +1,4 @@
-name: Go
+name: Portfolio
 on:
  push:
    branches:
@@ -46,7 +46,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          dockerfile: dockerfile.prod
+          file: dockerfile.prod
           push: true
           tags: |
             cbasny/portfolio:prod

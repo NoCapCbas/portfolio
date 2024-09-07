@@ -48,5 +48,5 @@ jobs:
           context: .
           file: dockerfile.prod
           push: true
-          tags: ghcr.io/cbasny/portfolio:prod
+          tags: ghcr.io/NoCapCbas/portfolio:prod
 

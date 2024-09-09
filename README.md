@@ -36,13 +36,10 @@ https://www.hudy9x.com
 
 
 # Deployment
-Pull image
-```bash
-docker pull ghcr.io/nocapcbas/portfolio:prod
-```
-
-Use example script(prod.sh) to run image
+Use example script(init-deployment.sh) to run image
 * don't forget to replace placeholder variables
+This script is only for initial deployment, subsequent changes to repo will be handled by
+new pushes to image package, and pulled by watchtower service for auto deployment
 ```shell
 #!/bin/bash
 
@@ -56,3 +53,5 @@ docker run -d \
   -e HOST_DOMAIN="$HOST_DOMAIN" \
   ghcr.io/nocapcbas/portfolio:prod
 ```
+
+

@@ -48,5 +48,8 @@ export HOST_DOMAIN=example.com
 # Run the Docker container with environment variables
 docker compose -f docker-compose.prod.yml up -d --build --force-recreate
 ```
-
+To make the script executable, use the chmod command:
+```shell
+chmod +x init-deployment.sh
+```
 

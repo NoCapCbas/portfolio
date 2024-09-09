@@ -6,34 +6,32 @@ This project serves as a minimalist hub to show clients/employers my projects, r
 - alpinejs
 - tailwindcss
 
-<!-- # Application Architecture Overview -->
-
-# Resources
-- icons, sourced from https://heroicons.com/
+# Production Infrastructure Overview
+- Traefik, as reverse-proxy 
+- Github workflow, for auto image package
+- Watchtower, for auto deployment from image package
 
 # Development
 
-## to install dependencies...
+## Frontend
+### to install dependencies...
 ```bash
 npm install
 ```
 
-## to refresh tailwind files...
+### to refresh tailwind files...
 ```bash
 npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
 ```
 
-## run the project...
+## Backend
+### run the project...
 ```bash
 go run ./cmd/main.go
 ```
 
-# To add a new project...
+## To add a new project...
 copy the templates from templates/projects/
-
-## design inspo
-https://www.hudy9x.com
-
 
 # Deployment
 Use example script(init-deployment.sh) to run image
@@ -52,4 +50,7 @@ To make the script executable, use the chmod command:
 ```shell
 chmod +x init-deployment.sh
 ```
+# Resources
+- icons, sourced from https://heroicons.com/
+- design inspo, sourced from https://www.hudy9x.com
 

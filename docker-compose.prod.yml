@@ -2,10 +2,10 @@
 services:
 
   portfolio:
-    image: cbasny/portfolio:prod
+    image: ghcr.io/nocapcbas/portfolio:prod
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.guestbook.rule=Host(`${PORTFOLIO_HOST}`)"
+      - "traefik.http.routers.guestbook.rule=Host(`${HOST_DOMAIN}`)"
       - "traefik.http.routers.guestbook.entrypoints=websecure"
       - "traefik.http.routers.guestbook.tls.certresolver=myresolver"
       - "com.centurylinklabs.watchtower.enable=true"

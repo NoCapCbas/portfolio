@@ -5,9 +5,9 @@ services:
     image: ghcr.io/nocapcbas/portfolio:prod
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.guestbook.rule=Host(`${HOST_DOMAIN}`)"
-      - "traefik.http.routers.guestbook.entrypoints=websecure"
-      - "traefik.http.routers.guestbook.tls.certresolver=myresolver"
+      - "traefik.http.routers.portfolio.rule=Host(`${HOST_DOMAIN}`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
       - "com.centurylinklabs.watchtower.enable=true"
     restart: always
 

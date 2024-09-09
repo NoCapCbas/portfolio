@@ -41,17 +41,12 @@ Use example script(init-deployment.sh) to run image
 This script is only for initial deployment, subsequent changes to repo will be handled by
 new pushes to image package, and pulled by watchtower service for auto deployment
 ```shell
-#!/bin/bash
-
 # Export environment variables, replace placeholder variables
 export DEV_EMAIL=example@domain.com
 export HOST_DOMAIN=example.com
 
 # Run the Docker container with environment variables
-docker run -d \
-  -e DEV_EMAIL="$DEV_EMAIL" \
-  -e HOST_DOMAIN="$HOST_DOMAIN" \
-  ghcr.io/nocapcbas/portfolio:prod
+docker compose -f docker-compose.prod.yml up -d --build --force-recreate
 ```
 
 

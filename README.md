@@ -50,6 +50,7 @@ To make the script executable, use the chmod command:
 ```shell
 chmod +x init-deployment.sh
 ```
+Currently using coolify for deployment
 # Resources
 - icons, sourced from https://heroicons.com/
 - design inspo, sourced from https://www.hudy9x.com

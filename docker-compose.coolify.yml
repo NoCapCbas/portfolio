@@ -3,3 +3,5 @@ services:
   portfolio:
     image: ghcr.io/nocapcbas/portfolio:prod
     restart: always
+    ports:
+      - "8080:8080"

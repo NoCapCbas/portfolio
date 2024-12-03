@@ -1,0 +1,11 @@
+
+services:
+  portfolio:
+    image: ghcr.io/nocapcbas/portfolio:prod
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`${HOST_DOMAIN}`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
+      - "com.centurylinklabs.watchtower.enable=true"
+    restart: always

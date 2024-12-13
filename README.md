@@ -53,5 +53,5 @@ chmod +x init-deployment.sh
 Currently using coolify for deployment
 # Resources
 - icons, sourced from https://heroicons.com/
-- design inspo, sourced from https://www.hudy9x.com
+- design inspo, sourced from https://www.hudy9x.com, https://nickjanetakis.com/
 

@@ -34,23 +34,19 @@ go run ./cmd/main.go
 copy the templates from templates/projects/
 
 # Deployment
-Use example script(init-deployment.sh) to run image
-* don't forget to replace placeholder variables
-This script is only for initial deployment, subsequent changes to repo will be handled by
-new pushes to image package, and pulled by watchtower service for auto deployment
-```shell
-# Export environment variables, replace placeholder variables
-export DEV_EMAIL=example@domain.com
-export HOST_DOMAIN=example.com
 
-# Run the Docker container with environment variables
-docker compose -f docker-compose.prod.yml up -d --build --force-recreate
+Create .env files using .env.example
 ```
-To make the script executable, use the chmod command:
-```shell
-chmod +x init-deployment.sh
+DEV_EMAIL="9aV4y@example.com"
+HOST_DOMAIN=localhost
+INTERNAL_PORT=8080
 ```
-Currently using coolify for deployment
+
+Run Makefile command 
+```
+make prod
+```
+
 # Resources
 - icons, sourced from https://heroicons.com/
 - design inspo, sourced from https://www.hudy9x.com, https://nickjanetakis.com/

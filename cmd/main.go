@@ -63,7 +63,7 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 
 	// start server
-	log.Printf("Listening on port :%d...", internalPort)
+	log.Printf("Listening on port :%s...", internalPort)
 	err := http.ListenAndServe(fmt.Sprintf(":%s", internalPort), nil) // http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)

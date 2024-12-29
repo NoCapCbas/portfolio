@@ -8,15 +8,19 @@ services:
       - "traefik.http.routers.portfolio.rule=Host(`${HOST_DOMAIN}`)"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=${INTERNAL_PORT}"
       - "com.centurylinklabs.watchtower.enable=true"
     restart: always
+    env_file:
+      - .env
+
 
   watchtower:
     image: containrrr/watchtower
     command:
       - "--label-enable"
       - "--interval"
-      - "30"
+      - "300"
       - "--rolling-restart"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

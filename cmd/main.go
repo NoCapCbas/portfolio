@@ -51,6 +51,8 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// get environment variables
+	internalPort := os.Getenv("INTERNAL_PORT")
 	// serve static files
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
@@ -59,8 +61,8 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 
 	// start server
-	log.Println("Listening on port :8080...")
-	err := http.ListenAndServe(":8080", nil)
+	log.Printf("Listening on port :%d...", internalPort)
+	err := http.ListenAndServe(fmt.Sprintf(":%s", internalPort), nil) // http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}

@@ -37,6 +37,7 @@ menu:
       url: "https://www.linkedin.com/in/damondiaz/"
       params:
         icon: linkedin
+
     # - name: Resume
     #   weight: 6
     #   path: resume/Damon_Diaz___Software_Engineer_2024_resume.pdf
@@ -46,22 +47,24 @@ menu:
   # sidebar:
 
 
-
 params:
   navbar:
     displayTitle: true
     displayLogo: false
     displayToggle: true
-
+    enableNavSwitches: true
   theme:
     default: dark
     displayTitle: true
     displayLogo: false
     displayToggle: true
+    enableFooterSwitches: true
   footer:
     enable: true
     displayPoweredBy: false
     displayCopyright: false
+    displayToggle: true
+    enableFooterSwitches: true
   blog:
     list:
       displayDate: true

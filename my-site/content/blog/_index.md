@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Blog posts about my experiences"
+description: "Blog posts about things I've learned"
 ---

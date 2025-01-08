@@ -1,0 +1,80 @@
+baseURL: https://damondiaz.xyz/
+languageCode: en-us
+defaultContentLanguage: en
+title: Damon Diaz
+enableRobotsTXT: true
+enableGitInfo: true
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      pageRef: /projects
+      weight: 1
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/imfing/hextra"
+      params:
+        icon: github
+    - name: LinkedIn
+      weight: 5
+      url: "https://www.linkedin.com/in/damondiaz/"
+      params:
+        icon: linkedin
+    # - name: Resume
+    #   weight: 6
+    #   path: resume/Damon_Diaz___Software_Engineer_2024_resume.pdf
+    #   params:
+    #     icon: file-pdf
+
+  # sidebar:
+
+
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    displayToggle: true
+
+  theme:
+    default: dark
+    displayTitle: true
+    displayLogo: false
+    displayToggle: true
+  footer:
+    enable: true
+    displayPoweredBy: false
+    displayCopyright: false
+  blog:
+    list:
+      displayDate: true
+      displayTags: true
+      sortBy: date
+      sortDesc: true 
+  projects:
+    list:
+      displayDate: true
+      displayTags: true
+      sortBy: date
+      sortDesc: true
+  highlight:
+    copy:
+      enable: true
+      display: true

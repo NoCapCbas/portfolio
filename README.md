@@ -55,3 +55,15 @@ Currently using coolify for deployment
 - icons, sourced from https://heroicons.com/
 - design inspo, sourced from https://www.hudy9x.com
 
+# Resources
+- icons, sourced from https://heroicons.com/
+
+# Development
+## install dependencies...
+```bash
+npm install
+```
+## to refresh tailwind files...
+```bash
+npx tailwindcss -i ./static/input.css -o ./static/output.css --watch
+```

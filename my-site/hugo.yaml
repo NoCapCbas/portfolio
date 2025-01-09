@@ -23,26 +23,23 @@ menu:
       name: Blog
       pageRef: /blog
       weight: 2
-    - name: Search
+    - name: Resume
       weight: 3
+      url: "/resume/Damon_Diaz___Software_Engineer_2024_resume.pdf"
+    - name: Search
+      weight: 4
       params:
         type: search
     - name: GitHub
-      weight: 4
-      url: "https://github.com/imfing/hextra"
+      weight: 5
+      url: "https://github.com/NoCapCbas"
       params:
         icon: github
     - name: LinkedIn
-      weight: 5
+      weight: 6
       url: "https://www.linkedin.com/in/damondiaz/"
       params:
         icon: linkedin
-
-    # - name: Resume
-    #   weight: 6
-    #   path: resume/Damon_Diaz___Software_Engineer_2024_resume.pdf
-    #   params:
-    #     icon: file-pdf
 
   # sidebar:
 
@@ -73,11 +70,7 @@ params:
       sortDesc: true 
   projects:
     list:
-      displayDate: true
       displayTags: true
+      displayGithubRepo: true
       sortBy: date
       sortDesc: true
-  highlight:
-    copy:
-      enable: true
-      display: true

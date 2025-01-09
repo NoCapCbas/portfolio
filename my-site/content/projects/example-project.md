@@ -1,155 +1,55 @@
 ---
-title: Markdown Syntax Guide
-date: 2020-01-01
+title: RSVP Hub
 authors:
   - name: Damon Diaz
     link: https://damondiaz.xyz
     image: https://github.com/imfing.png
 tags:
-  - Markdown
-  - Example
-  - Guide
+  - golang
+  - alpine.js
+  - tailwind
 excludeSearch: false
-image: "/images/example.webp"
+image: "/images/rsvpHub.webp"
+githubRepo: "https://github.com/github/rsvpHub"
 ---
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
+A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js
 <!--more-->
+## Overview
 
-## Basic Syntax
+When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.
 
-### Headings
+## Tech Stack
 
-```
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-```
+- **Backend**: Go (Golang)
+  - Less memory footprint for vps deployments
+  - Chosen for its simplicity and excellent performance
+  - Built-in HTTP server capabilities
+  - Easy deployment with single binary
+  - Minimal dependencies
 
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+- **Frontend**: 
+  - Tailwind CSS for utility-first styling
+  - Alpine.js for minimal JavaScript interactivity
+  - HTML templates with Go's template package
 
-### Emphasis
+## Key Features
 
-```text
-*This text will be italic*
-_This will also be italic_
+- Simple RSVP form with guest details
+- Mobile-responsive design
+- Admin dashboard for guest list management
 
-**This text will be bold**
-__This will also be bold__
+## Technical Implementation
 
-_You **can** combine them_
-```
+- Used Go's standard library for routing and handling HTTP requests
+- Implemented server-side validation for form submissions
+- Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine
+- Utilized Alpine.js for dynamic form validation and UI updates
+- Designed with Tailwind CSS for a clean, modern interface
 
-*This text will be italic*
+## Learnings
 
-_This will also be italic_
-
-**This text will be bold**
-
-__This will also be bold__
-
-_You **can** combine them_
-
-### Lists
-
-#### Unordered
-
-```
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
-```
-
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
-
-#### Ordered
-
-```
-1. Item 1
-2. Item 2
-3. Item 3
-   1. Item 3a
-   2. Item 3b
-```
-
-### Images
-
-```markdown
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-```
-
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-
-### Links
-
-```markdown
-[Hugo](https://gohugo.io)
-```
-
-[Hugo](https://gohugo.io)
-
-### Blockquotes
-
-```markdown
-As Newton said:
-
-> If I have seen further it is by standing on the shoulders of Giants.
-```
-
-> If I have seen further it is by standing on the shoulders of Giants.
-
-### Inline Code
-
-```markdown
-Inline `code` has `back-ticks around` it.
-```
-
-Inline `code` has `back-ticks around` it.
-
-### Code Blocks
-
-#### Syntax Highlighting
-
-````markdown
-```go
-func main() {
-    fmt.Println("Hello World")
-}
-```
-````
-
-```go
-func main() {
-    fmt.Println("Hello World")
-}
-```
-
-### Tables
-
-```markdown
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-```
-
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-
-## References
-
-- [Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
-- [Hugo Markdown](https://gohugo.io/content-management/formats/#markdown)
+- Practiced keeping dependencies minimal
+- Balanced between features and simplicity
+- Gained experience with Alpine.js for lightweight interactivity
+- Improved understanding of Go's templating system

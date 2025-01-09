@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Damon Diaz – Projects</title>
-    <link>http://localhost:1313/projects/</link>
-    <description>Recent content in Projects on Damon Diaz</description>
+    <title>Damon Diaz – Tailwind</title>
+    <link>http://localhost:1313/tags/tailwind/</link>
+    <description>Recent content in Tailwind on Damon Diaz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/tags/tailwind/index.xml" rel="self" type="application/rss+xml" />
     
     
       

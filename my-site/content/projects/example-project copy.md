@@ -9,7 +9,7 @@ tags:
   - alpine.js
   - tailwind
 excludeSearch: false
-image: "/images/example.webp"
+image: "/images/placeholder.svg"
 githubRepo: "https://github.com/github/rsvpHub"
 ---
 

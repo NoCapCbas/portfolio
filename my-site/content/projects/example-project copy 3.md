@@ -1,5 +1,5 @@
 ---
-title: RSVP Hub
+title: URL Shortener
 authors:
   - name: Damon Diaz
     link: https://damondiaz.xyz

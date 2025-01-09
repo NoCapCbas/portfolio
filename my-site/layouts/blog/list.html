@@ -12,8 +12,10 @@
 
         </div>
         {{- $pages := partial "utils/sort-pages" (dict "page" . "by" site.Params.blog.list.sortBy "order" site.Params.blog.list.sortOrder) -}}
+        <div class="hx-grid hx-grid-cols-1 md:hx-grid-cols-2 lg:hx-grid-cols-3 hx-gap-6 hx-mt-8">
         {{- range $pages }}
-          <div class="hx-mb-10">
+          <div class="hx-flex hx-flex-col hx-bg-slate-50 dark:hx-bg-slate-800/50 hx-rounded-lg hx-p-2 hx-cursor-pointer hx-transition-all hover:hx-shadow-lg">
+
             <h3><a style="color: inherit; text-decoration: none;" class="hx-block hx-font-semibold hx-mt-8 hx-text-2xl " href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             {{- if site.Params.blog.list.displayTags -}}
               {{ with .Params.tags }}
@@ -34,6 +36,7 @@
             <p class="hx-opacity-50 hx-text-sm hx-mt-4 hx-leading-7">{{ partial "utils/format-date" .Date }}</p>
           </div>
         {{ end -}}
+        </div>
       </main>
     </article>
     <div class="max-xl:hx-hidden hx-h-0 hx-w-64 hx-shrink-0"></div>

@@ -28,6 +28,13 @@ prod-logs:
 
 hot-css:
 	npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+
+local-dev:
+	cd site && npm run dev
+
+local-build:
+	cd site && npm run build
+
 		
 help:
 	@echo "Available targets:"

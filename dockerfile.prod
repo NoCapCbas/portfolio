@@ -23,7 +23,7 @@ FROM alpine:3.14
 WORKDIR /root/
 
 # Copy the binary from the builder stage
-COPY --from=builder /app/build .
+COPY --from=builder /app/dist .
 
 # Run the binary
 CMD ["npm", "run", "start", "--host", "0.0.0.0", "--port", "8080"]

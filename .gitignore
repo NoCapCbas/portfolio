@@ -22,3 +22,5 @@ __pycache__/
 # 
 package-lock.json
 
+# Ignore dist directory
+**/dist/

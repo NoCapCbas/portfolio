@@ -7,3 +7,4 @@ serve:
 build:
 	cd my-site && hugo mod tidy
 	cd my-site && hugo --minify --environment production
+

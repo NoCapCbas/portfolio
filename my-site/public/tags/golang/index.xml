@@ -1,246 +1,181 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Damon Diaz – Golang</title>
-    <link>http://localhost:1313/tags/golang/</link>
-    <description>Recent content in Golang on Damon Diaz</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	  <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>RSVP Hub</title>
-      <link>http://localhost:1313/projects/example-project-copy-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/example-project-copy-2/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p&gt;
-&lt;h2&gt;Overview&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p&gt;
-&lt;h2&gt;Tech Stack&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tech-stack&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tech-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go (Golang)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Less memory footprint for vps deployments&lt;/li&gt;
-&lt;li&gt;Chosen for its simplicity and excellent performance&lt;/li&gt;
-&lt;li&gt;Built-in HTTP server capabilities&lt;/li&gt;
-&lt;li&gt;Easy deployment with single binary&lt;/li&gt;
-&lt;li&gt;Minimal dependencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Frontend&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tailwind CSS for utility-first styling&lt;/li&gt;
-&lt;li&gt;Alpine.js for minimal JavaScript interactivity&lt;/li&gt;
-&lt;li&gt;HTML templates with Go&amp;rsquo;s template package&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Key Features&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;key-features&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Simple RSVP form with guest details&lt;/li&gt;
-&lt;li&gt;Mobile-responsive design&lt;/li&gt;
-&lt;li&gt;Admin dashboard for guest list management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Technical Implementation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;technical-implementation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#technical-implementation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li&gt;
-&lt;li&gt;Implemented server-side validation for form submissions&lt;/li&gt;
-&lt;li&gt;Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li&gt;
-&lt;li&gt;Utilized Alpine.js for dynamic form validation and UI updates&lt;/li&gt;
-&lt;li&gt;Designed with Tailwind CSS for a clean, modern interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Learnings&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;learnings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#learnings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Practiced keeping dependencies minimal&lt;/li&gt;
-&lt;li&gt;Balanced between features and simplicity&lt;/li&gt;
-&lt;li&gt;Gained experience with Alpine.js for lightweight interactivity&lt;/li&gt;
-&lt;li&gt;Improved understanding of Go&amp;rsquo;s templating system&lt;/li&gt;
-&lt;/ul&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>RSVP Hub</title>
-      <link>http://localhost:1313/projects/example-project-copy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/example-project-copy/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p&gt;
-&lt;h2&gt;Overview&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p&gt;
-&lt;h2&gt;Tech Stack&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tech-stack&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tech-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go (Golang)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Less memory footprint for vps deployments&lt;/li&gt;
-&lt;li&gt;Chosen for its simplicity and excellent performance&lt;/li&gt;
-&lt;li&gt;Built-in HTTP server capabilities&lt;/li&gt;
-&lt;li&gt;Easy deployment with single binary&lt;/li&gt;
-&lt;li&gt;Minimal dependencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Frontend&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tailwind CSS for utility-first styling&lt;/li&gt;
-&lt;li&gt;Alpine.js for minimal JavaScript interactivity&lt;/li&gt;
-&lt;li&gt;HTML templates with Go&amp;rsquo;s template package&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Key Features&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;key-features&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Simple RSVP form with guest details&lt;/li&gt;
-&lt;li&gt;Mobile-responsive design&lt;/li&gt;
-&lt;li&gt;Admin dashboard for guest list management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Technical Implementation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;technical-implementation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#technical-implementation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li&gt;
-&lt;li&gt;Implemented server-side validation for form submissions&lt;/li&gt;
-&lt;li&gt;Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li&gt;
-&lt;li&gt;Utilized Alpine.js for dynamic form validation and UI updates&lt;/li&gt;
-&lt;li&gt;Designed with Tailwind CSS for a clean, modern interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Learnings&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;learnings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#learnings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Practiced keeping dependencies minimal&lt;/li&gt;
-&lt;li&gt;Balanced between features and simplicity&lt;/li&gt;
-&lt;li&gt;Gained experience with Alpine.js for lightweight interactivity&lt;/li&gt;
-&lt;li&gt;Improved understanding of Go&amp;rsquo;s templating system&lt;/li&gt;
-&lt;/ul&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>RSVP Hub</title>
-      <link>http://localhost:1313/projects/example-project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/example-project/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p&gt;
-&lt;h2&gt;Overview&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p&gt;
-&lt;h2&gt;Tech Stack&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tech-stack&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tech-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go (Golang)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Less memory footprint for vps deployments&lt;/li&gt;
-&lt;li&gt;Chosen for its simplicity and excellent performance&lt;/li&gt;
-&lt;li&gt;Built-in HTTP server capabilities&lt;/li&gt;
-&lt;li&gt;Easy deployment with single binary&lt;/li&gt;
-&lt;li&gt;Minimal dependencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Frontend&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tailwind CSS for utility-first styling&lt;/li&gt;
-&lt;li&gt;Alpine.js for minimal JavaScript interactivity&lt;/li&gt;
-&lt;li&gt;HTML templates with Go&amp;rsquo;s template package&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Key Features&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;key-features&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Simple RSVP form with guest details&lt;/li&gt;
-&lt;li&gt;Mobile-responsive design&lt;/li&gt;
-&lt;li&gt;Admin dashboard for guest list management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Technical Implementation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;technical-implementation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#technical-implementation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li&gt;
-&lt;li&gt;Implemented server-side validation for form submissions&lt;/li&gt;
-&lt;li&gt;Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li&gt;
-&lt;li&gt;Utilized Alpine.js for dynamic form validation and UI updates&lt;/li&gt;
-&lt;li&gt;Designed with Tailwind CSS for a clean, modern interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Learnings&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;learnings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#learnings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Practiced keeping dependencies minimal&lt;/li&gt;
-&lt;li&gt;Balanced between features and simplicity&lt;/li&gt;
-&lt;li&gt;Gained experience with Alpine.js for lightweight interactivity&lt;/li&gt;
-&lt;li&gt;Improved understanding of Go&amp;rsquo;s templating system&lt;/li&gt;
-&lt;/ul&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>URL Shortener</title>
-      <link>http://localhost:1313/projects/example-project-copy-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/example-project-copy-3/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p&gt;
-&lt;h2&gt;Overview&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;overview&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p&gt;
-&lt;h2&gt;Tech Stack&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tech-stack&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tech-stack&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go (Golang)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Less memory footprint for vps deployments&lt;/li&gt;
-&lt;li&gt;Chosen for its simplicity and excellent performance&lt;/li&gt;
-&lt;li&gt;Built-in HTTP server capabilities&lt;/li&gt;
-&lt;li&gt;Easy deployment with single binary&lt;/li&gt;
-&lt;li&gt;Minimal dependencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Frontend&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tailwind CSS for utility-first styling&lt;/li&gt;
-&lt;li&gt;Alpine.js for minimal JavaScript interactivity&lt;/li&gt;
-&lt;li&gt;HTML templates with Go&amp;rsquo;s template package&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Key Features&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;key-features&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#key-features&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Simple RSVP form with guest details&lt;/li&gt;
-&lt;li&gt;Mobile-responsive design&lt;/li&gt;
-&lt;li&gt;Admin dashboard for guest list management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Technical Implementation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;technical-implementation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#technical-implementation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li&gt;
-&lt;li&gt;Implemented server-side validation for form submissions&lt;/li&gt;
-&lt;li&gt;Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li&gt;
-&lt;li&gt;Utilized Alpine.js for dynamic form validation and UI updates&lt;/li&gt;
-&lt;li&gt;Designed with Tailwind CSS for a clean, modern interface&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Learnings&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;learnings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#learnings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Practiced keeping dependencies minimal&lt;/li&gt;
-&lt;li&gt;Balanced between features and simplicity&lt;/li&gt;
-&lt;li&gt;Gained experience with Alpine.js for lightweight interactivity&lt;/li&gt;
-&lt;li&gt;Improved understanding of Go&amp;rsquo;s templating system&lt;/li&gt;
-&lt;/ul&gt;
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Damon Diaz – Golang</title><link>https://damondiaz.xyz/tags/golang/</link><description>Recent content in Golang on Damon Diaz</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://damondiaz.xyz/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>RSVP Hub</title><link>https://damondiaz.xyz/projects/example-project-copy-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://damondiaz.xyz/projects/example-project-copy-2/</guid><description>
+&lt;p>A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p>
+&lt;h2>Overview&lt;span class="hx-absolute -hx-mt-20" id="overview">&lt;/span>
+&lt;a href="#overview" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p>
+&lt;h2>Tech Stack&lt;span class="hx-absolute -hx-mt-20" id="tech-stack">&lt;/span>
+&lt;a href="#tech-stack" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Backend&lt;/strong>: Go (Golang)&lt;/p>
+&lt;ul>
+&lt;li>Less memory footprint for vps deployments&lt;/li>
+&lt;li>Chosen for its simplicity and excellent performance&lt;/li>
+&lt;li>Built-in HTTP server capabilities&lt;/li>
+&lt;li>Easy deployment with single binary&lt;/li>
+&lt;li>Minimal dependencies&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Frontend&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Tailwind CSS for utility-first styling&lt;/li>
+&lt;li>Alpine.js for minimal JavaScript interactivity&lt;/li>
+&lt;li>HTML templates with Go&amp;rsquo;s template package&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>Key Features&lt;span class="hx-absolute -hx-mt-20" id="key-features">&lt;/span>
+&lt;a href="#key-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Simple RSVP form with guest details&lt;/li>
+&lt;li>Mobile-responsive design&lt;/li>
+&lt;li>Admin dashboard for guest list management&lt;/li>
+&lt;/ul>
+&lt;h2>Technical Implementation&lt;span class="hx-absolute -hx-mt-20" id="technical-implementation">&lt;/span>
+&lt;a href="#technical-implementation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li>
+&lt;li>Implemented server-side validation for form submissions&lt;/li>
+&lt;li>Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li>
+&lt;li>Utilized Alpine.js for dynamic form validation and UI updates&lt;/li>
+&lt;li>Designed with Tailwind CSS for a clean, modern interface&lt;/li>
+&lt;/ul>
+&lt;h2>Learnings&lt;span class="hx-absolute -hx-mt-20" id="learnings">&lt;/span>
+&lt;a href="#learnings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Practiced keeping dependencies minimal&lt;/li>
+&lt;li>Balanced between features and simplicity&lt;/li>
+&lt;li>Gained experience with Alpine.js for lightweight interactivity&lt;/li>
+&lt;li>Improved understanding of Go&amp;rsquo;s templating system&lt;/li>
+&lt;/ul></description></item><item><title>RSVP Hub</title><link>https://damondiaz.xyz/projects/example-project-copy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://damondiaz.xyz/projects/example-project-copy/</guid><description>
+&lt;p>A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p>
+&lt;h2>Overview&lt;span class="hx-absolute -hx-mt-20" id="overview">&lt;/span>
+&lt;a href="#overview" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p>
+&lt;h2>Tech Stack&lt;span class="hx-absolute -hx-mt-20" id="tech-stack">&lt;/span>
+&lt;a href="#tech-stack" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Backend&lt;/strong>: Go (Golang)&lt;/p>
+&lt;ul>
+&lt;li>Less memory footprint for vps deployments&lt;/li>
+&lt;li>Chosen for its simplicity and excellent performance&lt;/li>
+&lt;li>Built-in HTTP server capabilities&lt;/li>
+&lt;li>Easy deployment with single binary&lt;/li>
+&lt;li>Minimal dependencies&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Frontend&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Tailwind CSS for utility-first styling&lt;/li>
+&lt;li>Alpine.js for minimal JavaScript interactivity&lt;/li>
+&lt;li>HTML templates with Go&amp;rsquo;s template package&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>Key Features&lt;span class="hx-absolute -hx-mt-20" id="key-features">&lt;/span>
+&lt;a href="#key-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Simple RSVP form with guest details&lt;/li>
+&lt;li>Mobile-responsive design&lt;/li>
+&lt;li>Admin dashboard for guest list management&lt;/li>
+&lt;/ul>
+&lt;h2>Technical Implementation&lt;span class="hx-absolute -hx-mt-20" id="technical-implementation">&lt;/span>
+&lt;a href="#technical-implementation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li>
+&lt;li>Implemented server-side validation for form submissions&lt;/li>
+&lt;li>Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li>
+&lt;li>Utilized Alpine.js for dynamic form validation and UI updates&lt;/li>
+&lt;li>Designed with Tailwind CSS for a clean, modern interface&lt;/li>
+&lt;/ul>
+&lt;h2>Learnings&lt;span class="hx-absolute -hx-mt-20" id="learnings">&lt;/span>
+&lt;a href="#learnings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Practiced keeping dependencies minimal&lt;/li>
+&lt;li>Balanced between features and simplicity&lt;/li>
+&lt;li>Gained experience with Alpine.js for lightweight interactivity&lt;/li>
+&lt;li>Improved understanding of Go&amp;rsquo;s templating system&lt;/li>
+&lt;/ul></description></item><item><title>RSVP Hub</title><link>https://damondiaz.xyz/projects/example-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://damondiaz.xyz/projects/example-project/</guid><description>
+&lt;p>A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p>
+&lt;h2>Overview&lt;span class="hx-absolute -hx-mt-20" id="overview">&lt;/span>
+&lt;a href="#overview" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p>
+&lt;h2>Tech Stack&lt;span class="hx-absolute -hx-mt-20" id="tech-stack">&lt;/span>
+&lt;a href="#tech-stack" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Backend&lt;/strong>: Go (Golang)&lt;/p>
+&lt;ul>
+&lt;li>Less memory footprint for vps deployments&lt;/li>
+&lt;li>Chosen for its simplicity and excellent performance&lt;/li>
+&lt;li>Built-in HTTP server capabilities&lt;/li>
+&lt;li>Easy deployment with single binary&lt;/li>
+&lt;li>Minimal dependencies&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Frontend&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Tailwind CSS for utility-first styling&lt;/li>
+&lt;li>Alpine.js for minimal JavaScript interactivity&lt;/li>
+&lt;li>HTML templates with Go&amp;rsquo;s template package&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>Key Features&lt;span class="hx-absolute -hx-mt-20" id="key-features">&lt;/span>
+&lt;a href="#key-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Simple RSVP form with guest details&lt;/li>
+&lt;li>Mobile-responsive design&lt;/li>
+&lt;li>Admin dashboard for guest list management&lt;/li>
+&lt;/ul>
+&lt;h2>Technical Implementation&lt;span class="hx-absolute -hx-mt-20" id="technical-implementation">&lt;/span>
+&lt;a href="#technical-implementation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li>
+&lt;li>Implemented server-side validation for form submissions&lt;/li>
+&lt;li>Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li>
+&lt;li>Utilized Alpine.js for dynamic form validation and UI updates&lt;/li>
+&lt;li>Designed with Tailwind CSS for a clean, modern interface&lt;/li>
+&lt;/ul>
+&lt;h2>Learnings&lt;span class="hx-absolute -hx-mt-20" id="learnings">&lt;/span>
+&lt;a href="#learnings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Practiced keeping dependencies minimal&lt;/li>
+&lt;li>Balanced between features and simplicity&lt;/li>
+&lt;li>Gained experience with Alpine.js for lightweight interactivity&lt;/li>
+&lt;li>Improved understanding of Go&amp;rsquo;s templating system&lt;/li>
+&lt;/ul></description></item><item><title>URL Shortener</title><link>https://damondiaz.xyz/projects/example-project-copy-3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://damondiaz.xyz/projects/example-project-copy-3/</guid><description>
+&lt;p>A minimal, self-hosted RSVP system built with Go, Tailwind CSS, and Alpine.js&lt;/p>
+&lt;h2>Overview&lt;span class="hx-absolute -hx-mt-20" id="overview">&lt;/span>
+&lt;a href="#overview" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When planning my baby shower, I needed a simple RSVP system. Instead of using existing solutions, I decided to build my own minimal version as a side project. This gave me complete control over the features while keeping it lightweight and efficient.&lt;/p>
+&lt;h2>Tech Stack&lt;span class="hx-absolute -hx-mt-20" id="tech-stack">&lt;/span>
+&lt;a href="#tech-stack" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Backend&lt;/strong>: Go (Golang)&lt;/p>
+&lt;ul>
+&lt;li>Less memory footprint for vps deployments&lt;/li>
+&lt;li>Chosen for its simplicity and excellent performance&lt;/li>
+&lt;li>Built-in HTTP server capabilities&lt;/li>
+&lt;li>Easy deployment with single binary&lt;/li>
+&lt;li>Minimal dependencies&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Frontend&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Tailwind CSS for utility-first styling&lt;/li>
+&lt;li>Alpine.js for minimal JavaScript interactivity&lt;/li>
+&lt;li>HTML templates with Go&amp;rsquo;s template package&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2>Key Features&lt;span class="hx-absolute -hx-mt-20" id="key-features">&lt;/span>
+&lt;a href="#key-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Simple RSVP form with guest details&lt;/li>
+&lt;li>Mobile-responsive design&lt;/li>
+&lt;li>Admin dashboard for guest list management&lt;/li>
+&lt;/ul>
+&lt;h2>Technical Implementation&lt;span class="hx-absolute -hx-mt-20" id="technical-implementation">&lt;/span>
+&lt;a href="#technical-implementation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Used Go&amp;rsquo;s standard library for routing and handling HTTP requests&lt;/li>
+&lt;li>Implemented server-side validation for form submissions&lt;/li>
+&lt;li>Stored data in memory for simplicity and portability, only for one time use so for my use case it was fine&lt;/li>
+&lt;li>Utilized Alpine.js for dynamic form validation and UI updates&lt;/li>
+&lt;li>Designed with Tailwind CSS for a clean, modern interface&lt;/li>
+&lt;/ul>
+&lt;h2>Learnings&lt;span class="hx-absolute -hx-mt-20" id="learnings">&lt;/span>
+&lt;a href="#learnings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Practiced keeping dependencies minimal&lt;/li>
+&lt;li>Balanced between features and simplicity&lt;/li>
+&lt;li>Gained experience with Alpine.js for lightweight interactivity&lt;/li>
+&lt;li>Improved understanding of Go&amp;rsquo;s templating system&lt;/li>
+&lt;/ul></description></item></channel></rss>

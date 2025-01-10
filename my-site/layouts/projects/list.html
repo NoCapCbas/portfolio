@@ -14,7 +14,8 @@
         {{- $pages := partial "utils/sort-pages" (dict "page" . "by" site.Params.projects.list.sortBy "order" site.Params.projects.list.sortOrder) -}}
         <div class="hx-grid hx-grid-cols-1 md:hx-grid-cols-2 lg:hx-grid-cols-3 hx-gap-6 hx-mt-8">
           {{- range $pages }}
-            <div class="hx-flex hx-flex-col hx-bg-slate-50 dark:hx-bg-slate-800/50 hx-rounded-lg hx-p-2 hx-cursor-pointer hx-transition-all hover:hx-shadow-lg">
+            <div class="hx-flex hx-flex-col hx-bg-slate-50 dark:hx-bg-slate-800/50 hx-rounded-lg hx-p-2 hx-cursor-pointer hx-transition-all hover:hx-shadow-lg hx-h-full">
+              <div class="hx-flex hx-flex-col hx-flex-grow">
               <h3>
                 <a style="color: inherit; text-decoration: none;" class="hx-block hx-font-semibold hx-text-xl" href="{{ .RelPermalink }}">
                   {{ .Title }}
@@ -28,7 +29,9 @@
                 {{ end -}}
               {{- end -}}
               {{- if .Params.image -}}
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="hx-w-full hx-h-48 hx-object-cover hx-rounded-lg hx-mb-4">
+                <div class="hx-flex-grow hx-flex hx-items-center hx-justify-center">
+                  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="hx-w-full hx-object-contain hx-rounded-lg hx-mb-4">
+                </div>
               {{- end -}}
 
               <p class="hx-opacity-80 hx-mt-2 hx-leading-7 hx-line-clamp-3">{{- partial "utils/page-description" . -}}</p>
@@ -37,6 +40,7 @@
                   {{- $readMore -}}
                 </a>
                 <p class="hx-opacity-50 hx-text-sm hx-mt-2">{{ partial "utils/format-date" .Date }}</p>
+              </div>
               </div>
             </div>
           {{ end -}}

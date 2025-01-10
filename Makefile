@@ -14,6 +14,9 @@ dev-logs:
 prod:
 	docker compose --env-file .env -f docker-compose.prod.yml up -d --build
 
+prod-portfolio:
+	docker compose --env-file .env -f docker-compose.prod.yml up -d --build --force-recreate portfolio
+
 prod-recreate:
 	docker compose --env-file .env -f docker-compose.prod.yml up -d --build --force-recreate
 

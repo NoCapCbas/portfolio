@@ -5,6 +5,7 @@ This project serves as a minimalist hub to show clients/employers my projects, r
 - golang
 - alpinejs
 - tailwindcss
+- air
 
 # Production Infrastructure Overview
 - Traefik, as reverse-proxy 

@@ -1,27 +1,30 @@
 
 dev:
-	docker compose -f docker-compose.dev.yml up -d --build
+	docker compose --env-file .env -f docker-compose.dev.yml up -d --build
 
 dev-recreate:
-	docker compose -f docker-compose.dev.yml up -d --build
+	docker compose --env-file .env -f docker-compose.dev.yml up -d --build --force-recreate
 
 dev-down:
-	docker compose -f docker-compose.dev.yml down
+	docker compose --env-file .env -f docker-compose.dev.yml down
 
 dev-logs:
-	docker-compose -f docker-compose.dev.yml logs
+	docker-compose --env-file .env -f docker-compose.dev.yml logs
 
 prod:
-	docker compose -f docker-compose.prod.yml up -d --build
+	docker compose --env-file .env -f docker-compose.prod.yml up -d --build
 
 prod-recreate:
-	docker compose -f docker-compose.prod.yml up -d --build --force-recreate
+	docker compose --env-file .env -f docker-compose.prod.yml up -d --build --force-recreate
 
 prod-down:
-	docker compose -f docker-compose.prod.yml down
+	docker compose --env-file .env -f docker-compose.prod.yml down
 
 prod-logs:
-	docker-compose -f docker-compose.prod.yml logs
+	docker compose --env-file .env -f docker-compose.prod.yml logs
+
+hot-css:
+	npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
 		
 help:
 	@echo "Available targets:"

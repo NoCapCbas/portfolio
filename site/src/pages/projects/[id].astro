@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
+import CTACoffee from '../../components/CTACoffee.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
@@ -42,4 +43,5 @@ const { Content } = await render(project);
             </div>
         )
     }
+    <CTACoffee class="my-16 sm:my-24" />
 </BaseLayout>

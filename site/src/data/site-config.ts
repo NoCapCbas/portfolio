@@ -37,6 +37,7 @@ export type SiteConfig = {
     subscribe?: Subscribe;
     postsPerPage?: number;
     projectsPerPage?: number;
+    ctaLinks?: any;
 };
 
 const siteConfig: SiteConfig = {
@@ -124,6 +125,14 @@ const siteConfig: SiteConfig = {
         title: 'Subscribe to Dante Newsletter',
         text: 'One update per week. All the latest posts directly in your inbox.',
         formUrl: '#'
+    },
+    ctaLinks: {
+        "coffee":{
+            title: 'Found my content helpful?',
+            description: 'If you learned something from my content or found it helpful, please consider buying me a coffee.',
+            text: 'Buy me a Coffee',
+            href: 'https://www.buymeacoffee.com/damondiaz'
+        }
     },
     postsPerPage: 8,
     projectsPerPage: 8

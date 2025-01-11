@@ -26,8 +26,11 @@ prod-down:
 prod-logs:
 	docker compose --env-file .env -f docker-compose.prod.yml logs
 
-hot-css:
-	npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+prod-preview:
+	docker compose --env-file .env -f docker-compose.prod.yml up -d portfolio
+
+prod-local:
+	docker compose --env-file .env -f docker-compose.prod-local.yml up -d --build
 
 local-dev:
 	cd site && npm run dev

@@ -55,7 +55,12 @@ const siteConfig: SiteConfig = {
         'I\'m currently documenting my learning journey',
     ],
     skills: [
-        'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Git', 'GitHub', 'Linux', 'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Git', 'GitHub', 'Linux'
+        'Python', 'JavaScript', 'TypeScript', 
+        'Golang', 'C++',
+        'React', 'Next.js', 'Tailwind CSS', 'Node.js', 
+        'Express', 'MongoDB', 'PostgreSQL', 
+        'Docker',  
+        'AWS', 'CI/CD', 'Git', 'GitHub', 'Linux'
     ],
     headerNavLinks: [
         {

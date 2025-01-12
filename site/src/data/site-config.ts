@@ -58,7 +58,7 @@ const siteConfig: SiteConfig = {
     skills: [
         'Python', 'JavaScript', 'TypeScript', 
         'Golang', 'C++',
-        'React', 'Next.js', 'Tailwind CSS', 'Node.js', 
+        'React', 'Next.js', 'Tailwind CSS', 'Node.js', 'Astro.js',
         'Express', 'MongoDB', 'PostgreSQL', 
         'Docker',  
         'AWS', 'CI/CD', 'Git', 'GitHub', 'Linux'

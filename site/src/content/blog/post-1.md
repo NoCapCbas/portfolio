@@ -1,47 +1,105 @@
 ---
-title: The Advantages & Disadvantages of Working from Home
-excerpt: In recent years, the way we work has undergone a significant transformation, largely due to advancements in technology and changing attitudes toward work-life balance. One of the most notable changes has been the rise of remote work, allowing employees to work from the comfort of their own homes.
-publishDate: 'Aug 5 2023'
+title: Deploying an Astro.js site on a vps
+excerpt: Deploying an Astro.js site on a vps using docker, docker-compose, github actions, watchtower, and traefik
+publishDate: 'Jan 11 2025'
 tags:
-  - Guide
+  - astro.js
+  - docker
+  - ci/cd
+  - deployment
 seo:
   image:
     src: '/post-1.jpg'
-    alt: A person standing at the window
+    alt: Rocketship taking off for deployment
 ---
 
-![A person standing at the window](/post-1.jpg)
+![Rocketship taking off for deployment](/post-1.jpg)
 
-**Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_.
+## Preparing Your Astro.js Site for Deployment
+1. **Integrate Node:** This adapter allows Astro to deploy your on-demand rendered routes to Node targets. If you’re using Astro as a static site builder, you don’t need an adapter such as node. Run the following command in your terminal:
+  ```bash
+  npx astro add node
+  ```
+  source: https://docs.astro.build/en/guides/integrations-guide/node/
+  
+2. **Build Your Site:** Before deploying your site, you need to build it for production. Run the following command in your terminal:
 
-In recent years, the way we work has undergone a significant transformation, largely due to advancements in technology and changing attitudes toward work-life balance. One of the most notable changes has been the rise of remote work, allowing employees to work from the comfort of their own homes. While this shift has brought about many benefits, it has also introduced its fair share of challenges. Let's explore the advantages and disadvantages of working from home.
+   ```bash
+   npm run build
+   ```
 
-## Advantages of Working from Home
+   This command compiles your site into static assets and server-rendered files (if applicable) in the `dist/` directory.
 
-1. **Flexibility:** One of the most significant advantages of remote work is the flexibility it offers. Employees can often set their own hours, which can be particularly beneficial for those with family responsibilities or other commitments.
+2. **Test the Build Locally:** Verify that your build works as expected by using the `preview` command:
 
-2. **Reduced Commute:** Eliminating the daily commute not only saves time but also reduces stress and expenses associated with transportation. This can lead to better mental health and increased job satisfaction.
+   ```bash
+   npm run preview
+   ```
 
-3. **Cost Savings:** Working from home can result in significant cost savings. Employees can save money on transportation, work attire, and daily meals, which can have a positive impact on their overall financial well-being.
+   This starts a local server to test your production build.
+3. **Create the Dockerfile:** Create the a similar dockerfile as the one below with `site` being the main direcotry with the astro.js project:
 
-4. **Increased Productivity:** Many people find that they are more productive when working from home. The absence of office distractions and the ability to create a personalized work environment can lead to improved focus and efficiency.
+   ```dockerfile
+    # Use the official Golang image as the base image
+    FROM node:20-alpine
 
-5. **Work-Life Balance:** Remote work allows for better work-life balance. Employees can better manage their personal and professional lives, leading to reduced burnout and increased job satisfaction.
+    # Set the working directory
+    WORKDIR /app
 
-> Your ability to discipline yourself to set clear goals and then work toward them every day will do more to guarantee your success than any other single factor.
+    # Copy go mod file
+    COPY ./site .
 
-## Disadvantages of Working from Home
+    # Download all dependencies
+    RUN npm install
 
-1. **Isolation:** Remote work can be lonely. The absence of coworkers and face-to-face interaction can lead to feelings of isolation and loneliness, which may negatively impact mental health.
+    # Build the application
+    RUN npm run build
 
-2. **Difficulty in Communication:** Effective communication can be a challenge when working remotely. Misunderstandings, lack of clear communication, and delayed responses can hinder teamwork and collaboration.
+    CMD ["node", "./dist/server/entry.mjs"]
+   ```
 
-3. **Work-Life Boundaries:** While remote work can improve work-life balance, it can also blur the lines between work and personal life. It can be challenging to establish clear boundaries, leading to overwork and burnout.
+4. **Create the Docker Compose file:** Create a similar docker-compose.yml file:
 
-4. **Technology Issues:** Technical problems, such as internet connectivity issues or software glitches, can disrupt work and cause frustration.
+   ```docker-compose.yml
 
-5. **Distractions:** Working from home can be riddled with distractions, ranging from household chores to noisy neighbors. Maintaining focus can be a constant struggle for some.
+   ```
+   - Traefik is being used as a reverse proxy to hide ip address and expose application using domain name
+   - (OPTIONAL) Watchtower is being used to poll the public github main repository to automate deployments
 
-6. **Career Growth:** Some employees may feel that working remotely limits their opportunities for career advancement, as they may have less visibility within the organization.
+5. **Create .env file:** Create a .env file to hold secrets and to set host and port for prodution deployment:
 
-While it offers flexibility, cost savings, and improved work-life balance, it can also lead to isolation, communication challenges, and distractions. The key to successful remote work lies in finding a balance that suits individual preferences and addressing potential drawbacks through effective communication, time management, and self-discipline. As remote work continues to evolve, understanding and adapting to these advantages and disadvantages will be crucial for both employees and employers.
+   ```.env
+   HOST=0.0.0.0
+   POST=8080
+   ```
+   Astro uses the environment variables names `HOST` and `PORT`, so be sure to use these to expose the correct host and port that match your dockerfile and docker-compose.yml
+
+## Configuring Your Astro.js Project for Production
+
+1. **Optimize Performance:**
+
+   - Enable image optimization if your hosting platform supports it.
+   - Use Astro.js’s built-in tools like `@astrojs/image` to handle responsive images.
+
+2. **Handle 404, 500 pages:**
+
+   You can handle 400 and 500 pages by creating `src/pages/404.astro' and 'src/pages/500.astro'
+   source: https://docs.astro.build/en/basics/astro-pages/
+
+## Debugging Common Issues
+
+1. **Build Failures:**
+
+   - Double-check your Astro.js configuration in `astro.config.mjs`.
+   - Ensure all necessary dependencies are installed.
+
+2. **Missing Assets:**
+
+   - Verify that your `public/` folder contains all required static assets.
+   - Check your hosting platform's build settings to ensure the `dist/` directory is being served.
+
+3. **Broken Links or Routes:**
+
+   - Test your site thoroughly before deployment.
+   - If using dynamic routes, confirm they are supported by your hosting platform.
+

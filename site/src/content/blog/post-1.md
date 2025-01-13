@@ -7,6 +7,9 @@ tags:
   - docker
   - ci/cd
   - deployment
+  - traefik
+  - watchtower
+isFeatured: true
 seo:
   image:
     src: '/post-1.jpg'

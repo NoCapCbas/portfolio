@@ -5,6 +5,7 @@ publishDate: 'October 5 2023'
 tags:
   - Astro.js
   - Web development
+isFeatured: true
 seo:
   image:
     src: '/post-2.jpg'

@@ -2,6 +2,7 @@
 title: 'SavviURL: URL Shortener'
 description: SavviURL is a URL shortener that helps you shorten long URLs.
 githubRepo: 'https://github.com/NoCapCbas/savviURL'
+isFeatured: true
 seo:
   image:
     src: '/project-2.jpg'

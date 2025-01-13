@@ -1,6 +1,7 @@
 ---
 title: 'SavviVerify: Email Verification Tool'
 description: SavviVerify is an email verification tool that helps you verify the validity of email addresses.
+githubRepo: 'https://github.com/NoCapCbas/savviVerify'
 seo:
   image:
     src: '/project-1.jpg'
@@ -31,9 +32,11 @@ SavviVerify is an email verification tool that helps you verify the validity of 
 
 - Backend: Golang
 
-## Outcome
+## Things I Learneed building this project
 
-SavviVerify has successfully created a tool that allows users to verify the validity of email addresses.
+- How to build a CLI tool in Golang.
+- How to use the `net/smtp` package to send emails.
+- Learned about Domain Verification, MX Record, and SPF Record.
 
 ## Future Development
 

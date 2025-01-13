@@ -13,8 +13,6 @@ seo:
 
 ![Half open laptop on a desk](/post-2.jpg)
 
-**Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_.
-
 Setting up a default theme in Astro.js is an excellent way to start building your website with this cutting-edge framework. In this guide, we'll walk you through the process step-by-step, making it easy to get up and running with Astro.js and a prebuilt theme.
 
 ## 1. Install Astro.js

@@ -1,13 +1,13 @@
 ---
-type Props = {
-    class?: string;
-}
+import type { HTMLAttributes } from 'astro/types';
 
-const { class: className } = Astro.props;
+type Props = HTMLAttributes<'svg'>;
+
+const { class: className, ...props } = Astro.props;
 ---
 
 <svg 
-    class={className} 
+    class={className} {...props} 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 24 24" 
     fill="currentColor"

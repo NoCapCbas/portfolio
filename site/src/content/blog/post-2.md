@@ -1,7 +1,7 @@
 ---
 title: Setting Up an Astro.js Default Theme
 excerpt: Learn how to quickly set up a default theme in Astro.js to kickstart your website development journey with this powerful, modern framework.
-publishDate: 'October 5 2023'
+publishDate: 'January 12 2025'
 tags:
   - Astro.js
   - Web development

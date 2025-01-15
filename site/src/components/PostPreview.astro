@@ -6,7 +6,7 @@ import FormattedDate from './FormattedDate.astro';
 type Props = { post: CollectionEntry<'blog'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { post, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, publishDate, updatedDate, excerpt } = post.data;
+const { title, publishDate, updatedDate, excerpt, tags } = post.data;
 const TitleTag = headingLevel;
 ---
 
@@ -17,6 +17,15 @@ const TitleTag = headingLevel;
         >
             {title}
         </TitleTag>
+        {tags && tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-2">
+                {tags.map((tag) => (
+                    <span class="px-2 py-1 text-white text-xs font-mono bg-black dark:bg-white dark:text-black rounded-full">
+                        #{tag}
+                    </span>
+                ))}
+            </div>
+        )}
         <div class="mt-1 text-sm leading-normal">
             <FormattedDate date={publishDate} />
             {

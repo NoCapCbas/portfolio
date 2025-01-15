@@ -42,7 +42,8 @@ const projects = defineCollection({
         isFeatured: z.boolean().default(false),
         githubRepo: z.string().optional(),
         website: z.string().optional(),
-        seo: seoSchema.optional()
+        seo: seoSchema.optional(),
+        tags: z.array(z.string()).default([])
     })
 });
 

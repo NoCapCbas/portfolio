@@ -3,6 +3,8 @@ title: 'SavviVerify: Email Verification Tool'
 description: SavviVerify is an email verification tool that helps you verify the validity of email addresses.
 githubRepo: 'https://github.com/NoCapCbas/savviVerify'
 isFeatured: true
+tags:
+ - golang
 seo:
   image:
     src: '/project-1.jpg'

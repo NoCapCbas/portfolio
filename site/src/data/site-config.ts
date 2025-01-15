@@ -52,7 +52,7 @@ const siteConfig: SiteConfig = {
         "I'm 🔥 about programming and debugging code.",
         'I have extensive experience in 🐍 and JavaScript.',
         'My favorite programming language is currently 🐹(Golang).',
-        'I enjoy solving 🧩 through code.',
+        'I enjoy solving 🧩\'s through code.',
         'I\'m currently documenting my learning journey',
     ],
     skills: [

@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import GitHub from '../../icons/GitHub.astro';
+// import GitHub from '@/icons/GitHub.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import CTACoffee from '../../components/CTACoffee.astro';
@@ -32,10 +32,10 @@ const { Content } = await render(project);
             <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{title}</h1>
         </header>
         <div class="flex items-center gap-2 mb-8">
-            View on GitHub
             {githubRepo && (
                 <a href={githubRepo} target="_blank" rel="noopener noreferrer" class="rounded-full flex items-center justify-center">
-                    <GitHub class="w-8 h-8" />
+                    {/* <GitHub class="w-8 h-8" /> */}
+                    View on GitHub
                 </a>
             )}
         </div>

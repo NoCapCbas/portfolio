@@ -1,8 +1,8 @@
 ---
-title: 'Dog Breed Assistant Chatbot'
-description: A chatbot that helps you learn about dog breeds.
-githubRepo: 'https://github.com/NoCapCbas/dog-breed-assistant'
-website: 'https://dog-chatbot.damondiaz.xyz'
+title: 'Math Assistant Chatbot'
+description: A chatbot that helps you learn math.
+githubRepo: 'https://github.com/NoCapCbas/math-chatbot'
+website: 'https://math-chatbot.damondiaz.xyz'
 isFeatured: true
 tags:
  - python
@@ -14,24 +14,25 @@ seo:
     alt: Project preview
 ---
 
-![Project preview](/project-1.jpg)
+![Project preview](/project-2.jpg)
 
 **Project Overview:**
-A chatbot that helps you learn about dog breeds.
+A chatbot that helps you learn math and solve math problems.
 
 ## Objectives
 
-1. Develop a user-friendly chatbot that allows users to learn about dog breeds.
-2. Use ollama to generate responses to user queries.
-3. Use streamlit to create a user interface for the chatbot.
-4. Use Python to implement the chatbot.
-5. Learn how to use ollama and streamlit to create a chatbot.
+1. Develop a user-friendly chatbot that allows users to learn math and solve math problems.
+2. Fine tuning llm model to improve accuracy of responses.
+3. Use ollama to generate responses to user queries.
+4. Use streamlit to create a user interface for the chatbot.
+5. Use Python to implement the chatbot.
+6. Learn how to use ollama and streamlit to create a chatbot.
 
 ## Features
 
 1. **Chatbot:**
 
-- Users can chat with the chatbot to learn about dog breeds.
+- Users can chat with the chatbot to learn math and solve math problems.
 
 
 ## Technology Stack

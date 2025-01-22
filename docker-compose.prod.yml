@@ -26,6 +26,19 @@ services:
     env_file:
       - .env
 
+  dog_chatbot:
+    image: ghcr.io/nocapcbas/dog-breed-assistant:prod
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dog-breed-assistant.rule=Host(`${DOG_CHATBOT_DOMAIN}`)"
+      - "traefik.http.routers.dog-breed-assistant.entrypoints=websecure"
+      - "traefik.http.routers.dog-breed-assistant.tls.certresolver=myresolver"
+      - "traefik.http.services.dog-breed-assistant.loadbalancer.server.port=${INTERNAL_PORT}"
+    restart: always
+    env_file:
+      - .env
+
+
   watchtower:
     image: containrrr/watchtower
     command:

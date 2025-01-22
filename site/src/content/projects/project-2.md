@@ -1,10 +1,13 @@
 ---
-title: 'SavviURL: URL Shortener'
-description: SavviURL is a URL shortener that helps you shorten long URLs.
-githubRepo: 'https://github.com/NoCapCbas/savviURL'
+title: 'Dog Breed Assistant Chatbot'
+description: A chatbot that helps you learn about dog breeds.
+githubRepo: 'https://github.com/NoCapCbas/dog-breed-assistant'
+website: 'https://dog-chatbot.damondiaz.xyz'
 isFeatured: true
 tags:
- - golang
+ - python
+ - streamlit
+ - ollama
 seo:
   image:
     src: '/project-2.jpg'
@@ -14,35 +17,37 @@ seo:
 ![Project preview](/project-1.jpg)
 
 **Project Overview:**
-SavviURL is a URL shortener that helps you shorten long URLs.
+A chatbot that helps you learn about dog breeds.
 
 ## Objectives
 
-1. Develop a user-friendly URL shortener that allows users to shorten long URLs.
+1. Develop a user-friendly chatbot that allows users to learn about dog breeds.
+2. Use ollama to generate responses to user queries.
+3. Use streamlit to create a user interface for the chatbot.
+4. Use Python to implement the chatbot.
+5. Learn how to use ollama and streamlit to create a chatbot.
 
 ## Features
 
-1. **URL Shortening:**
+1. **Chatbot:**
 
-- Users can shorten long URLs.
-
-2. **API:**
-
-- Being API allows users to shorten long URLs from the command line.
+- Users can chat with the chatbot to learn about dog breeds.
 
 
 ## Technology Stack
 
-- Frontend: Astro.js
-- Backend: Golang
+- Frontend: Streamlit UI
+- Backend: python, streamlit, ollama
 
 ## Things I Learneed building this project
 
-- Learned Astro.js.
-- How to build an API in Golang.
-- How to use the `net/http` package to create an API in Golang.
-- System design for a URL shortener.
+- Learned how to use ollama to generate responses to user queries.
+- Learned how to use streamlit to create a user interface for the chatbot.
+- Learned how to use Python to implement the chatbot.
+- Learned how to load a model in ollama.
+- Learned how to load data in ollama.
 
 ## Future Development
 
-- Add analytics to the URL shortener to track the number of clicks on the shortened URL and the source of the clicks.
+- Add analytics to the chatbot to track the number of users and the most popular dog breeds.
+- Add more data to the chatbot to make it more accurate.

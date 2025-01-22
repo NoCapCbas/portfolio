@@ -21,7 +21,7 @@ seo:
 ![Rocketship taking off for deployment](/post-1.jpg)
 
 ## Tackling a DSA problem
-The best framework i've learned for tackling DSA problems is the engineering method, I first learned about this method from formation.dev.
+The best framework i've learned for tackling DSA problems is the engineering method, I first learned about this method from [formation.dev](https://formation.dev/c/v1t32sp5).
 How I personally use this method to solve DSA problems is to set a timer for 15 minutes to implement this framework on a problem. If I can not solve the problem within the time, I will look at the solution and try to understand it and revisit the problem a later day to try again.
 
 The engineering method consists of 5 steps:

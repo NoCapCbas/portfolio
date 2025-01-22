@@ -2,6 +2,7 @@
 title: 'Site Ping: Ping a site and get the html response'
 description: Site Ping is a tool that helps you ping a site and get the html response.
 githubRepo: 'https://github.com/NoCapCbas/site-ping'
+website: 'https://site-ping.damondiaz.xyz'
 isFeatured: true
 tags:
  - golang

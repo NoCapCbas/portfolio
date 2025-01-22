@@ -27,7 +27,7 @@ services:
       - .env
 
   dog_chatbot:
-    image: ghcr.io/nocapcbas/dog-breed-assistant:prod
+    image: ghcr.io/nocapcbas/dog-breed-assistant-chatbot:prod
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.dog-breed-assistant.rule=Host(`${DOG_CHATBOT_DOMAIN}`)"

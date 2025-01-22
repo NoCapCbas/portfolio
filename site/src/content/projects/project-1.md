@@ -1,10 +1,13 @@
 ---
-title: 'SavviVerify: Email Verification Tool'
-description: SavviVerify is an email verification tool that helps you verify the validity of email addresses.
-githubRepo: 'https://github.com/NoCapCbas/savviVerify'
+title: 'Site Ping: Ping a site and get the html response'
+description: Site Ping is a tool that helps you ping a site and get the html response.
+githubRepo: 'https://github.com/NoCapCbas/site-ping'
 isFeatured: true
 tags:
  - golang
+ - app
+ - tailwind
+ - alpinejs
 seo:
   image:
     src: '/project-1.jpg'
@@ -14,33 +17,33 @@ seo:
 ![Project preview](/project-1.jpg)
 
 **Project Overview:**
-SavviVerify is an email verification tool that helps you verify the validity of email addresses.
+Site Ping is a tool that helps you ping a site and get the html response.
 
 ## Objectives
 
-1. Develop a user-friendly email verification tool that allows users to verify the validity of email addresses.
+1. Develop a user-friendly tool that allows users to ping a site and get the html response.
+2. Learn more about golang and alpine.js.
 
-## Features
+## MVP Features
 
-1. **Email Verification:**
+1. **Ping a site and get the html response:**
 
-- Users can verify the validity of email addresses.
-
-2. **CLI Tool:**
-
-- Being CLI tool allows users to verify email addresses from the command line.
-
+- Users can ping a site and get the html response.
 
 ## Technology Stack
 
 - Backend: Golang
+- Frontend: Alpine.js, Tailwind
 
-## Things I Learneed building this project
+I used alpine.js for the frontend because it's a lightweight framework that's easy to use and it's easy to integrate with tailwind. Also has minimal setup since this is a toy project. And used golang for backend to learn more about the language.
 
-- How to build a CLI tool in Golang.
-- How to use the `net/smtp` package to send emails.
-- Learned about Domain Verification, MX Record, and SPF Record.
+## Things I Learned building this project
+
+- How to build golang backend.
+- How to embed html in golang application.
+- How to decrease server load by rate limiting all users in using golang.
 
 ## Future Development
 
-- Add api support for email verification.
+- Add api support for pinging a site and getting the html response.
+- Add more features like checking if the site is up, checking if the site is down, etc.

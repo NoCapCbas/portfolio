@@ -26,14 +26,14 @@ services:
     env_file:
       - .env
 
-  dog_chatbot:
-    image: ghcr.io/nocapcbas/dog-breed-assistant-chatbot:prod
+  math_chatbot:
+    image: ghcr.io/nocapcbas/math-chatbot:prod
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.dog-breed-assistant.rule=Host(`${DOG_CHATBOT_DOMAIN}`)"
-      - "traefik.http.routers.dog-breed-assistant.entrypoints=websecure"
-      - "traefik.http.routers.dog-breed-assistant.tls.certresolver=myresolver"
-      - "traefik.http.services.dog-breed-assistant.loadbalancer.server.port=${INTERNAL_PORT}"
+      - "traefik.http.routers.math-chatbot.rule=Host(`${MATH_CHATBOT_DOMAIN}`)"
+      - "traefik.http.routers.math-chatbot.entrypoints=websecure"
+      - "traefik.http.routers.math-chatbot.tls.certresolver=myresolver"
+      - "traefik.http.services.math-chatbot.loadbalancer.server.port=${INTERNAL_PORT}"
     restart: always
     env_file:
       - .env

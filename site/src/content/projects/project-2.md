@@ -47,6 +47,7 @@ A chatbot that helps you learn math and solve math problems.
 - Learned how to use Python to implement the chatbot.
 - Learned how to load a model in ollama.
 - Learned how to load data in ollama.
+- LLM models use ALOT of memory and cpu.
 
 ## Future Development
 

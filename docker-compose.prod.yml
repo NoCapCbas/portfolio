@@ -14,31 +14,6 @@ services:
     env_file:
       - .env
 
-  site_ping:
-    image: ghcr.io/nocapcbas/site-ping:prod
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.site-ping.rule=Host(`${SITE_PING_DOMAIN}`)"
-      - "traefik.http.routers.site-ping.entrypoints=websecure"
-      - "traefik.http.routers.site-ping.tls.certresolver=myresolver"
-      - "traefik.http.services.site-ping.loadbalancer.server.port=${INTERNAL_PORT}"
-    restart: always
-    env_file:
-      - .env
-
-  math_chatbot:
-    image: ghcr.io/nocapcbas/math-chatbot:prod
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.math-chatbot.rule=Host(`${MATH_CHATBOT_DOMAIN}`)"
-      - "traefik.http.routers.math-chatbot.entrypoints=websecure"
-      - "traefik.http.routers.math-chatbot.tls.certresolver=myresolver"
-      - "traefik.http.services.math-chatbot.loadbalancer.server.port=${INTERNAL_PORT}"
-    restart: always
-    env_file:
-      - .env
-
-
   watchtower:
     image: containrrr/watchtower
     command:

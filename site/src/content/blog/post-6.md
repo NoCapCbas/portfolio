@@ -12,13 +12,8 @@ tags:
   - protocols
   - headers
 isFeatured: true
-seo:
-  image:
-    src: '/post-6.jpg'
-    alt: HTTP Protocol Flow Diagram
 ---
 
-![HTTP Protocol Flow Diagram](/post-6.jpg)
 
 ## What is HTTP?
 HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the web. It's a stateless protocol that allows clients (like browsers) to communicate with servers through a request-response cycle.

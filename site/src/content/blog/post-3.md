@@ -12,13 +12,8 @@ tags:
   - python
   - javascript
 isFeatured: true
-seo:
-  image:
-    src: '/post-1.jpg'
-    alt: Rocketship taking off for deployment
 ---
 
-![Rocketship taking off for deployment](/post-1.jpg)
 
 ## Tackling a DSA problem
 The best framework i've learned for tackling DSA problems is the engineering method, I first learned about this method from [formation.dev](https://formation.dev/c/v1t32sp5).

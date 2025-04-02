@@ -10,13 +10,7 @@ tags:
   - traefik
   - watchtower
 isFeatured: true
-seo:
-  image:
-    src: '/post-1.jpg'
-    alt: Rocketship taking off for deployment
 ---
-
-![Rocketship taking off for deployment](/post-1.jpg)
 
 ## Preparing Your Astro.js Site for Deployment
 1. **Integrate Node:** This adapter allows Astro to deploy your on-demand rendered routes to Node targets. If you’re using Astro as a static site builder, you don’t need an adapter such as node. Run the following command in your terminal:

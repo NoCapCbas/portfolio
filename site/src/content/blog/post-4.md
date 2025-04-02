@@ -12,13 +12,7 @@ tags:
   - http
   - api
 isFeatured: true
-seo:
-  image:
-    src: '/post-4.jpg'
-    alt: Client-Server Architecture Diagram
 ---
-
-![Client-Server Architecture Diagram](/post-4.jpg)
 
 ## What is the Client-Server Model?
 The client-server model is a distributed application structure that partitions tasks between the providers of a resource or service (servers) and service requesters (clients). It's the foundation of how the modern web works, from simple websites to complex web applications.

@@ -6,13 +6,8 @@ tags:
   - astro.js
   - frontend 
 isFeatured: true
-seo:
-  image:
-    src: '/post-2.jpg'
-    alt: Half open laptop on a desk
 ---
 
-![Half open laptop on a desk](/post-2.jpg)
 
 Setting up a default theme in Astro.js is an excellent way to start building your website with this cutting-edge framework. In this guide, we'll walk you through the process step-by-step, making it easy to get up and running with Astro.js and a prebuilt theme.
 

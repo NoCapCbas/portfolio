@@ -12,13 +12,8 @@ tags:
   - smtp
   - ftp
 isFeatured: true
-seo:
-  image:
-    src: '/post-5.jpg'
-    alt: Internet Protocols Diagram
 ---
 
-![Internet Protocols Diagram](/post-5.jpg)
 
 ## Core Internet Protocols Overview
 The internet relies on various protocols working together to enable communication between devices. Let's explore the most important ones that every developer should understand.

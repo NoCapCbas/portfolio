@@ -1,4 +1,3 @@
-version: '3.7'
 
 services: 
   prod-local:
@@ -11,4 +10,4 @@ services:
       - .env
     environment:
       - ENV=production
-
+    restart: always

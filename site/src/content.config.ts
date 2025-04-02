@@ -22,7 +22,8 @@ const blog = defineCollection({
         updatedDate: z.coerce.date().optional(),
         isFeatured: z.boolean().default(false),
         tags: z.array(z.string()).default([]),
-        seo: seoSchema.optional()
+        seo: seoSchema.optional(),
+        isDraft: z.boolean().default(false),
     })
 });
 
@@ -43,7 +44,8 @@ const projects = defineCollection({
         githubRepo: z.string().optional(),
         website: z.string().optional(),
         seo: seoSchema.optional(),
-        tags: z.array(z.string()).default([])
+        tags: z.array(z.string()).default([]),
+        isDraft: z.boolean().default(false),
     })
 });
 

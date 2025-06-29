@@ -1,0 +1,15 @@
+services:
+  watchtower:
+    image: containrrr/watchtower
+    command:
+      - "--label-enable"
+      - "--interval"
+      - "300"
+      - "--rolling-restart"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+# Add this label to containers to watch them
+# - "com.centurylinklabs.watchtower.enable=true"
+

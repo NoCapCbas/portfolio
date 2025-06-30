@@ -18,6 +18,9 @@ services:
       - .env
     networks:
       - shared
+    platform: linux/arm64 #raspberrypi
+      
+
 
 networks:
   shared:

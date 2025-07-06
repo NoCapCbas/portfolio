@@ -1,14 +1,17 @@
 ---
-title: 'Site Ping: Ping a site and get the html response'
-description: Site Ping is a tool that helps you ping a site and get the html response.
-githubRepo: 'https://github.com/NoCapCbas/site-ping'
-website: 'https://site-ping.damondiaz.xyz'
+title: 'webStash: Bookmark your favorite sites'
+description: webStash is a simple tool to bookmark and organize your favorite websites.
+githubRepo: 'https://github.com/NoCapCbas/webstash'
+website: 'https://webstash.damondiaz.xyz'
 isFeatured: true
 tags:
- - golang
+ - python
  - app
- - tailwind
+ - tailwindcss
  - alpinejs
+ - docker
+ - sqlite
+ - cloudflare
 seo:
   image:
     src: '/project-1.jpg'
@@ -18,33 +21,39 @@ seo:
 ![Project preview](/project-1.jpg)
 
 **Project Overview:**
-Site Ping is a tool that helps you ping a site and get the html response.
+webStash is a simple tool to bookmark and organize your favorite websites.
 
 ## Objectives
 
-1. Develop a user-friendly tool that allows users to ping a site and get the html response.
-2. Learn more about golang and alpine.js.
+1. Develop a user-friendly tool that allows users to save, organize, and manage bookmarks.
+2. Learn more about Python, Docker, and integrating cloud services like Cloudflare Tunnels.
 
 ## MVP Features
 
-1. **Ping a site and get the html response:**
+1. **Bookmark and organize sites:**
 
-- Users can ping a site and get the html response.
+- Users can add, edit, and delete bookmarks.
+- Organize bookmarks with tags or folders.
 
 ## Technology Stack
 
-- Backend: Golang
-- Frontend: Alpine.js, Tailwind
+- Backend: Python (FastAPI)
+- Frontend: Alpine.js, TailwindCSS
+- Database: SQLite
+- Deployment: Docker, Cloudflare Tunnels
 
-I used alpine.js for the frontend because it's a lightweight framework that's easy to use and it's easy to integrate with tailwind. Also has minimal setup since this is a toy project. And used golang for backend to learn more about the language.
+I used Alpine.js and TailwindCSS for the frontend for a lightweight and flexible UI. Python (FastAPI) powers the backend for rapid development and easy API creation. SQLite is used for simple, file-based storage. Docker and Cloudflare Tunnels make deployment and secure remote access straightforward.
 
 ## Things I Learned building this project
 
-- How to build golang backend.
-- How to embed html in golang application.
-- How to decrease server load by rate limiting all users in using golang.
+- How to build a Python backend with FastAPI.
+- How to integrate SQLite for persistent storage.
+- How to containerize an app with Docker.
+- How to expose local services securely using Cloudflare Tunnels.
 
 ## Future Development
 
-- Add api support for pinging a site and getting the html response.
-- Add more features like checking if the site is up, checking if the site is down, etc.
+- Add user authentication and sharing features.
+- Implement bookmark import/export.
+- Add browser extension support.
+ Add more features like checking if the site is up, checking if the site is down, etc.

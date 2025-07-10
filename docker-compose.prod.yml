@@ -1,8 +1,7 @@
-
 services:
-
   portfolio:
     image: ghcr.io/nocapcbas/portfolio:prod
+    platform: linux/arm64 #raspberrypi
     labels:
       # - "traefik.enable=true"
       # - "traefik.http.routers.portfolio.rule=Host(`${HOST_DOMAIN}`)"
@@ -17,10 +16,7 @@ services:
     env_file:
       - .env
     networks:
-      - shared
-    platform: linux/arm64 #raspberrypi
-      
-
+      - shared-network
 
 networks:
   shared:

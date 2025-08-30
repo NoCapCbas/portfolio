@@ -3,11 +3,10 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
-import node from '@astrojs/node';
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://damondiaz.xyz',
+  output: 'static',
 
   integrations: [
       mdx(),
@@ -16,8 +15,4 @@ export default defineConfig({
           applyBaseStyles: false
       })
   ],
-
-  adapter: node({
-    mode: 'standalone'
-  }),
 });

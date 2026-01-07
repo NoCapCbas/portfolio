@@ -30,5 +30,21 @@ const { showHeader = true, ...head } = Astro.props;
             </main>
             <Footer />
         </div>
+        <script src="https://swetrix.org/swetrix.js" defer></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            swetrix.init('YP4Kz6XKOaNf', {
+              apiURL: 'https://swetrix-api.damondiaz.xyz/log',
+            })
+            swetrix.trackViews()
+          })
+        </script>
+        <noscript>
+          <img
+            src="https://swetrix-api.damondiaz.xyz/log/noscript?pid=YP4Kz6XKOaNf"
+            alt=""
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        </noscript>
     </body>
 </html>

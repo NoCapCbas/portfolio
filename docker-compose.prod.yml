@@ -3,11 +3,6 @@ services:
     image: ghcr.io/nocapcbas/portfolio:prod
     platform: linux/arm64 #raspberrypi
     labels:
-      # - "traefik.enable=true"
-      # - "traefik.http.routers.portfolio.rule=Host(`${HOST_DOMAIN}`)"
-      # - "traefik.http.routers.portfolio.entrypoints=websecure"
-      # - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
-      # - "traefik.http.services.portfolio.loadbalancer.server.port=${INTERNAL_PORT}"
       # watchtower label
       - "com.centurylinklabs.watchtower.enable=true"
     restart: always
@@ -15,9 +10,3 @@ services:
       - "8080:8080"
     env_file:
       - .env
-    networks:
-      - shared-network
-
-networks:
-  shared:
-    external: true

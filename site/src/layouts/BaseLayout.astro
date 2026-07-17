@@ -21,6 +21,12 @@ const { showHeader = true, ...head } = Astro.props;
         </script>
         <ClientRouter />
         <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="/RAfr1twcyczKmUbBTzjWA" async></script>
+        <!-- Privacy-friendly analytics by Plausible -->
+        <script is:inline async src="https://plausible-ce-production.up.railway.app/js/pa-BB34p8epfsoY2darNF1cP.js"></script>
+        <script is:inline>
+          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+          plausible.init()
+        </script>
     </head>
     <body class="bg-main text-main">
         <div class="flex flex-col min-h-screen px-4 md:px-8">
